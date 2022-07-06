@@ -9,6 +9,7 @@ public class Player_Move : MonoBehaviour
     public float Jump_Power = 5.0f;
 
     private Rigidbody2D rigid;
+    [SerializeField] private GameObject Down_Collider;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -24,9 +25,17 @@ public class Player_Move : MonoBehaviour
         {
             transform.position += Vector3.right * Move_Speed * Time.deltaTime;
         }
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                Down_Collider.GetComponent<Player_Down_Jump>().ChangeLayer();
+            }
+            else
+            {
+                Jump();
+            }
         }
     }
 
