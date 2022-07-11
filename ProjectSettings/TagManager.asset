@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Out_Floor
+  - Monster_ATK
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - Player
   - Under_Floor
-  - 
-  - 
-  - 
+  - Monster
+  - Monster_ATK
+  - Player_ATK
   - 
   - 
   - 

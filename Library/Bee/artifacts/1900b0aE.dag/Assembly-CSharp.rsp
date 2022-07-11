@@ -323,6 +323,9 @@
 -r:"D:/unity/2021.3.1f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"D:/unity/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"D:/unity/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
@@ -341,9 +344,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scrip/Player_Down_Jump.cs"
-"Assets/Scrip/Player_Jump_Under_Floor.cs"
-"Assets/Scrip/Player_Move.cs"
+"Assets/Scrip/Monster/Monster_ATK.cs"
+"Assets/Scrip/Monster/Monster_Move.cs"
+"Assets/Scrip/Player/Hit.cs"
+"Assets/Scrip/Player/Player_Down_Jump.cs"
+"Assets/Scrip/Player/Player_Jump_Under_Floor.cs"
+"Assets/Scrip/Player/Player_Move.cs"
 -langversion:9.0
 
 /deterministic
