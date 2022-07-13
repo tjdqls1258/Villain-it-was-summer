@@ -6032,6 +6032,7 @@ GameObject:
   - component: {fileID: 860475563}
   - component: {fileID: 860475565}
   - component: {fileID: 860475567}
+  - component: {fileID: 860475568}
   m_Layer: 8
   m_Name: Monster
   m_TagString: Monster
@@ -6163,6 +6164,28 @@ MonoBehaviour:
   Hit_Color: {r: 0, g: 0, b: 0, a: 0}
   Is_Hit: 0
   Reset_Hit_Time: 0.5
+--- !u!114 &860475568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860475560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4702fa91f953f8c45a7c808bef983e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  fDistance: 2
+  fMove_Spd: 1
+  fAttack_Delay: 3
+  iHP: 100
+  iMP: 0
+  iAD: 10
+  iAP: 10
+  iDEF: 5
+  iMDEF: 5
 --- !u!1 &1146980343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +6356,7 @@ GameObject:
   - component: {fileID: 1376433101}
   - component: {fileID: 1376433100}
   - component: {fileID: 1376433105}
+  - component: {fileID: 1376433106}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -6454,3 +6478,25 @@ MonoBehaviour:
   Hit_Color: {r: 0, g: 0, b: 0, a: 0}
   Is_Hit: 0
   Reset_Hit_Time: 0.5
+--- !u!114 &1376433106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376433098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9d275b3fad99645ae5a11f342cc6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  fDistance: 2
+  fMove_Spd: 1
+  fAttack_Delay: 3
+  iHP: 100
+  iMP: 0
+  iAD: 10
+  iAP: 10
+  iDEF: 5
+  iMDEF: 5

@@ -11,18 +11,44 @@ public class Hit : MonoBehaviour
     public bool Is_Hit = false;
     public float Reset_Hit_Time = 0.5f;
     private SpriteRenderer sprite;
+    private Unit Data;
 
     private void Awake()
     {
+        Data = GetComponent<Unit>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void Player_Is_Hit()
+    private void GetDamage(float Damage)
+    {
+        Data.iHP -= Damage;
+        if (Data.iHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Drop_Item();
+        Destroy(gameObject);
+    }
+
+    private void Drop_Item()
+    {
+        if(gameObject.tag == "Player")
+        {
+            return;
+        }
+        Debug.Log("아이템 드랍");
+    }
+
+    public void Player_Is_Hit(float Damage)
     {
         if (!Is_Hit)
         {
             StartCoroutine(Reset_Hit());
-            Debug.Log(gameObject.name + " : 맞음");
+            GetDamage(Damage);
             Is_Hit = true;
         }
     }

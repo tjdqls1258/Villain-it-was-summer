@@ -56,14 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scrip\Player\Hit.cs" />
+    <Compile Include="Assets\Scrip\Hit.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster_Move.cs" />
+    <Compile Include="Assets\Scrip\Collision_Manger.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Down_Jump.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Jump_Under_Floor.cs" />
+    <Compile Include="Assets\Scrip\Collision_Event.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster_ATK.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Move.cs" />
-    <Compile Include="Assets\Scrip\Collision_Event.cs" />
-    <Compile Include="Assets\Scrip\Collision_Manger.cs" />
+    <Compile Include="Assets\Scrip\Unit.cs" />
+    <Compile Include="Assets\Scrip\Monster\Monster.cs" />
+    <Compile Include="Assets\Scrip\Player\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

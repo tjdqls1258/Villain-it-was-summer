@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Collision_Event : MonoBehaviour
 {
-    public delegate void OnCollision(Collision2D collision);
-    public delegate void OnTrigger(Collider2D collider);
+    public delegate void OnCollision(Collision2D collision, GameObject self);
+    public delegate void OnTrigger(Collider2D collider, GameObject self);
 
     //각각 Enter(충돌 시) Stay(충돌 중) Exit(충돌 종료 시) 상황에 맞게 이벤트 등록 해서 사용
     public event OnCollision Enter;
@@ -19,7 +19,7 @@ public class Collision_Event : MonoBehaviour
 
     private void Start()
     {
-        GameObject.Find("Collision_Manger").GetComponent<Collision_Manger>().Add_Collider(this);
+        GameObject.Find("Collision_Manger").GetComponent<Collision_Manger>().Add_Collider(this, gameObject);
     }
 
     #region OnCollisionEnter2D
@@ -29,7 +29,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Enter(collision);
+        Enter(collision, gameObject);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -38,7 +38,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Stay(collision);
+        Stay(collision,gameObject);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -47,7 +47,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Exit(collision);
+        Exit(collision, gameObject);
     }
     #endregion
 
@@ -59,7 +59,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Trigger_Enter(collision);
+        Trigger_Enter(collision, gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -68,7 +68,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Trigger_Stay(collision);
+        Trigger_Stay(collision, gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -77,7 +77,7 @@ public class Collision_Event : MonoBehaviour
         {
             return;
         }
-        Trigger_Exit(collision);
+        Trigger_Exit(collision, gameObject);
     }
     #endregion
 }
