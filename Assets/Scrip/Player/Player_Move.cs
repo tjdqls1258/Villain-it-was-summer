@@ -18,6 +18,8 @@ public class Player_Move : MonoBehaviour
     [SerializeField] private GameObject Down_Collider;
     [SerializeField] private GameObject ATK_Area;
     [SerializeField] private GameObject Dash_Effect;
+    [SerializeField] private GameObject Unit_To_Player;
+    [SerializeField] private Animator animator;
     public GameObject ATK_Ation;
     private void Awake()
     {
@@ -35,7 +37,9 @@ public class Player_Move : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += Vector3.left * Move_Speed *Time.deltaTime;
+            animator.SetFloat("Move_Speed", 1.0f);
             ATK_Area.transform.position = transform.position + Vector3.left * 1.165f;
+            Unit_To_Player.transform.rotation = Quaternion.Euler(0, 0, 0);
             if (Input.GetKeyDown(KeyCode.X) && Is_Dsah)
             {
                 Dash(Vector3.left);
@@ -44,14 +48,20 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += Vector3.right * Move_Speed * Time.deltaTime;
+            animator.SetFloat("Move_Speed", 1.0f);
             ATK_Area.transform.position = transform.position + Vector3.right * 1.165f;
+            Unit_To_Player.transform.rotation = Quaternion.Euler(0, 180, 0);
             if (Input.GetKeyDown(KeyCode.X) && Is_Dsah)
             {
                 Dash(Vector3.right);
             }
         }
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            animator.SetFloat("Move_Speed", 0.0f);
+        }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
@@ -67,6 +77,7 @@ public class Player_Move : MonoBehaviour
         {
             Is_ATK = false;
             ATK_Ation.SetActive(true);
+            animator.SetTrigger("ATK");
             StartCoroutine(ATK());
         }
 

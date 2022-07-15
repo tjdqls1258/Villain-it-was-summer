@@ -6,17 +6,23 @@ public class Hit : MonoBehaviour
 {
     [SerializeField] private float Swap_Speed = 0.05f;
     [SerializeField] private float Hit_Invincible_Time = 0.5f;
-    [SerializeField] private Color Hit_Color;
+    [SerializeField] private Color[] Hit_Color;
 
     public bool Is_Hit = false;
     public float Reset_Hit_Time = 0.5f;
-    private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer[] sprite;
     private Unit Data;
 
     private void Awake()
     {
         Data = GetComponent<Unit>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
+        sprite = GetComponentsInChildren<SpriteRenderer>();
+        Hit_Color = new Color[sprite.Length];
+
+        for(int count = 0; count < sprite.Length; count++)
+        {
+            Hit_Color[count] = sprite[count].color;
+        }
     }
 
     private void GetDamage(float Damage)
@@ -58,18 +64,31 @@ public class Hit : MonoBehaviour
         float Gone_Time = 0.0f;
         while (Gone_Time <= Hit_Invincible_Time)
         {
-            if (sprite.color == Hit_Color)
+            for (int count = 0; count < sprite.Length; count++)
             {
-                sprite.color = Color.white;
-            }
-            else
-            {
-                sprite.color = Hit_Color;
+                if (sprite[count].color.a == 1.0f)
+                {
+                    Hit_Color[count] = sprite[count].color;
+                    Hit_Color[count].a = 0.3f;
+                    sprite[count].color = Hit_Color[count];
+                }
+                else
+                {
+                    Hit_Color[count] = sprite[count].color;
+                    Hit_Color[count].a = 1.0f;
+                    sprite[count].color = Hit_Color[count];
+                }
             }
             Gone_Time += Swap_Speed;
             yield return new WaitForSeconds(Swap_Speed);
         }
-        sprite.color = Color.white;
+        for (int count = 0; count < sprite.Length; count++)
+        {
+            Hit_Color[count] = sprite[count].color;
+            Hit_Color[count].a = 1.0f;
+            sprite[count].color = Hit_Color[count];
+        }
+        
         Is_Hit = false;
         Debug.Log(gameObject.name + " : º¹±Í");
     }
