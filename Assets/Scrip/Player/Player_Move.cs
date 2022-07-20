@@ -36,41 +36,22 @@ public class Player_Move : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += Vector3.left * Move_Speed *Time.deltaTime;
-            animator.SetFloat("Move_Speed", 1.0f);
-            ATK_Area.transform.position = transform.position + Vector3.left * 1.165f;
+            Move(Vector3.left);
             Unit_To_Player.transform.rotation = Quaternion.Euler(0, 0, 0);
-            if (Input.GetKeyDown(KeyCode.X) && Is_Dsah)
-            {
-                Dash(Vector3.left);
-            }
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += Vector3.right * Move_Speed * Time.deltaTime;
-            animator.SetFloat("Move_Speed", 1.0f);
-            ATK_Area.transform.position = transform.position + Vector3.right * 1.165f;
+            Move(Vector3.right);
             Unit_To_Player.transform.rotation = Quaternion.Euler(0, 180, 0);
-            if (Input.GetKeyDown(KeyCode.X) && Is_Dsah)
-            {
-                Dash(Vector3.right);
-            }
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             animator.SetFloat("Move_Speed", 0.0f);
         }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                Down_Collider.GetComponent<Player_Down_Jump>().ChangeLayer();
-            }
-            else
-            {
-                Jump();
-            }
+            Jump();
         }
 
         if(Input.GetKey(KeyCode.Z) && Is_ATK)
@@ -85,14 +66,31 @@ public class Player_Move : MonoBehaviour
 
     private void Jump()
     {
-        if(Mathf.Abs(rigid.velocity.y) > 0)
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            return;
+            Down_Collider.GetComponent<Player_Down_Jump>().ChangeLayer();
         }
+        else
+        {
+            if (Mathf.Abs(rigid.velocity.y) > 0)
+            {
+                return;
+            }
 
-        rigid.AddForce(Vector2.up * Jump_Power , ForceMode2D.Impulse);
+            rigid.AddForce(Vector2.up * Jump_Power, ForceMode2D.Impulse);
+        }
     }
 
+    private void Move(Vector3 _move)
+    {
+        transform.position += _move * Move_Speed * Time.deltaTime;
+        animator.SetFloat("Move_Speed", 1.0f);
+        ATK_Area.transform.position = transform.position + _move * 1.165f;
+        if (Input.GetKeyDown(KeyCode.X) && Is_Dsah)
+        {
+            Dash(_move);
+        }
+    }
     private void Dash(Vector2 _Dash_Vector)
     {
         Is_Dsah = false;

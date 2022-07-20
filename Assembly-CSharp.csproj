@@ -58,10 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\MinAttribute.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_EyeSet.cs" />
+    <Compile Include="Assets\Scrip\Player\Player_Skill.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_Manager.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_AnimationController.cs" />
+    <Compile Include="Assets\Scrip\Player\Skill.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Worker.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
@@ -72,7 +74,9 @@
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Scrip\Collision_Manger.cs" />
+    <Compile Include="Assets\New Folder\Tile_Setting.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
+    <Compile Include="Assets\Scrip\Player\Skill\Skill1.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Down_Jump.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Jump_Under_Floor.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="Assets\Scrip\Unit.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
+    <Compile Include="Assets\Scrip\Gate\Stage_Clear.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SPUM\ReadMe - 1.6.0.txt" />
