@@ -92,13 +92,14 @@
     <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
     <Compile Include="Assets\SPUM\Sprite_Editor(Beta)\Script\SpriteSyncManager.cs" />
+    <Compile Include="Assets\Scrip\Gate\Stage_Clear.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Scrip\Unit.cs" />
     <Compile Include="Assets\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
-    <Compile Include="Assets\Scrip\Gate\Stage_Clear.cs" />
+    <Compile Include="Assets\Scrip\Gate\Coverage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SPUM\ReadMe - 1.6.0.txt" />
