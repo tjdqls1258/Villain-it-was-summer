@@ -30,11 +30,11 @@ public class Player_Move : MonoBehaviour
 
     private void Update()
     {
-        if(rigid.velocity.x != 0.0f)
+        if (rigid.velocity.x != 0.0f)
         {
             return;
         }
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             Move(Vector3.left);
             Unit_To_Player.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -54,7 +54,7 @@ public class Player_Move : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetKey(KeyCode.Z) && Is_ATK)
+        if (Input.GetKey(KeyCode.Z) && Is_ATK)
         {
             Is_ATK = false;
             ATK_Ation.SetActive(true);
@@ -97,7 +97,7 @@ public class Player_Move : MonoBehaviour
         rigid.AddForce(_Dash_Vector * Dash_Power, ForceMode2D.Impulse);
         StartCoroutine(Dash_Timmer());
     }
-    
+
     private IEnumerator ATK()
     {
         yield return new WaitForSeconds(0.2f);

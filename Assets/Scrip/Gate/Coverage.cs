@@ -16,6 +16,7 @@ public class Coverage : MonoBehaviour
     {
         if(collision.transform.tag =="Player")
         {
+            Debug.Log("스테이지 클리어!");
             sprite.enabled = true;
         }
     }
