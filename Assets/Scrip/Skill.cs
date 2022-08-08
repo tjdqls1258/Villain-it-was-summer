@@ -9,6 +9,5 @@ public abstract class Skill : MonoBehaviour
     public string Skill_Tag = "None";
     public float Skill_CoolTime = 10f;
     public abstract void Skill_Ative();
-    public abstract void Passive_Ative();
     public abstract void Cancel_Skill();
 }

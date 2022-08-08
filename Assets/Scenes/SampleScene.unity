@@ -5604,6 +5604,7 @@ GameObject:
   - component: {fileID: 314865534}
   - component: {fileID: 314865533}
   - component: {fileID: 314865532}
+  - component: {fileID: 314865535}
   m_Layer: 0
   m_Name: Clear coverage
   m_TagString: Untagged
@@ -5618,7 +5619,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314865531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5652,15 +5653,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1191510351576865934, guid: dd255f029b1eb1347b77fb335d97ea38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.46875, y: 0.4375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &314865533
@@ -5679,10 +5680,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 0.46875, y: 0.4375}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -5704,6 +5705,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314865535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314865531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0442a01586b7be9418b94735ee0060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Moeny: 100
 --- !u!1 &316813217
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,7 +6118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467728367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.165, y: 0, z: 0}
+  m_LocalPosition: {x: -0.165, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6530,11 +6544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b33e503ce8817745810f18eefe97284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &792652825 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8673644546919423757, guid: 6dce8202a71ca01438416e2e43d29013, type: 3}
-  m_PrefabInstance: {fileID: 317312182}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &811326992 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6385923767686291953, guid: 6dce8202a71ca01438416e2e43d29013, type: 3}
@@ -6552,10 +6561,12 @@ GameObject:
   - component: {fileID: 860475566}
   - component: {fileID: 860475561}
   - component: {fileID: 860475564}
+  - component: {fileID: 860475571}
   - component: {fileID: 860475563}
-  - component: {fileID: 860475565}
   - component: {fileID: 860475567}
   - component: {fileID: 860475568}
+  - component: {fileID: 860475570}
+  - component: {fileID: 860475569}
   m_Layer: 8
   m_Name: Monster
   m_TagString: Monster
@@ -6598,7 +6609,7 @@ Transform:
   m_GameObject: {fileID: 860475560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.24, y: 8.82, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: -5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 664384759}
@@ -6619,10 +6630,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   This_And_Player_Distance: {x: 0, y: 0, z: 0}
-  Move_Speed: 1
   See_Max_Distance: 7
   ATK_Distance: 2.3
   Ray_Distance: 1.5
+  monster: {fileID: 0}
 --- !u!50 &860475564
 Rigidbody2D:
   serializedVersion: 4
@@ -6644,20 +6655,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &860475565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860475560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e057fcda0e3934594573035da1c66b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ATK_Aera: {fileID: 584768206}
-  ATK_Aera_Parent: {fileID: 443602823}
 --- !u!114 &860475566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6703,13 +6700,66 @@ MonoBehaviour:
   state: 0
   fDistance: 2
   fMove_Spd: 1
-  fAttack_Delay: 3
-  iHP: 100
+  fAttack_Delay: 1
+  fHP: 100
+  fDash_Power: 5
   iMP: 0
   iAD: 10
   iAP: 10
   iDEF: 5
   iMDEF: 5
+  skill_list:
+  - {fileID: 860475570}
+  - {fileID: 860475569}
+--- !u!114 &860475569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860475560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_Type: 1
+  Skill_Tag: ATK
+  Skill_CoolTime: 10
+  unit: {fileID: 860475568}
+  animation_Con: {fileID: 860475571}
+  ATK_Area: {fileID: 584768206}
+  Is_ATK: 0
+--- !u!114 &860475570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860475560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee46553908e6804bbb6099174ea7fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_Type: 1
+  Skill_Tag: Move
+  Skill_CoolTime: 10
+  unit: {fileID: 860475568}
+  animation_Con: {fileID: 860475571}
+--- !u!114 &860475571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860475560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22ed2ee7d3077341bdea3b6aaf55574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator_Con: {fileID: 664384760}
 --- !u!1 &954284744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,9 +7163,13 @@ GameObject:
   - component: {fileID: 1376433102}
   - component: {fileID: 1376433101}
   - component: {fileID: 1376433105}
-  - component: {fileID: 1376433107}
-  - component: {fileID: 1376433106}
   - component: {fileID: 1376433108}
+  - component: {fileID: 1376433106}
+  - component: {fileID: 1376433112}
+  - component: {fileID: 1376433111}
+  - component: {fileID: 1376433110}
+  - component: {fileID: 1376433109}
+  - component: {fileID: 1376433107}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -7236,14 +7290,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   fDistance: 2
-  fMove_Spd: 1
-  fAttack_Delay: 3
-  iHP: 100
+  fMove_Spd: 10
+  fAttack_Delay: 0.5
+  fHP: 100
+  fDash_Power: 10
   iMP: 0
   iAD: 10
   iAP: 10
   iDEF: 5
   iMDEF: 5
+  skill_list:
+  - {fileID: 1376433110}
+  - {fileID: 1376433111}
+  - {fileID: 1376433112}
+  Jump_Power: 20
 --- !u!114 &1376433107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7271,16 +7331,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b2a99a45510af4fa03608fb1ad10e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Move_Speed: 5
-  Jump_Power: 25
-  Dash_Power: 15
-  ATK_Delay: 0.5
   Down_Collider: {fileID: 53572466}
-  ATK_Area: {fileID: 467728367}
+  player: {fileID: 1376433106}
+--- !u!114 &1376433109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376433098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22ed2ee7d3077341bdea3b6aaf55574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator_Con: {fileID: 811326992}
+--- !u!114 &1376433110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376433098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_Type: 1
+  Skill_Tag: ATK
+  Skill_CoolTime: 10
+  unit: {fileID: 1376433106}
+  animation_Con: {fileID: 1376433109}
+  ATK_Area: {fileID: 122580166}
+  Is_ATK: 0
+--- !u!114 &1376433111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376433098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee46553908e6804bbb6099174ea7fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_Type: 1
+  Skill_Tag: Move
+  Skill_CoolTime: 10
+  unit: {fileID: 1376433106}
+  animation_Con: {fileID: 1376433109}
+--- !u!114 &1376433112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376433098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c95bb2cec0c4fe4b878ee547b512927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_Type: 1
+  Skill_Tag: Dash
+  Skill_CoolTime: 10
+  unit: {fileID: 1376433106}
+  rigid: {fileID: 1376433102}
   Dash_Effect: {fileID: 1468020083}
-  Unit_To_Player: {fileID: 792652825}
-  animator: {fileID: 811326992}
-  ATK_Ation: {fileID: 122580166}
 --- !u!1 &1398546791
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,10 @@ public class Player_Skill : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             GetComponentInChildren<Animator>().SetTrigger("Skill");
-            skill02.Skill_Ative();
+            if (skill02 != null)
+            {
+                skill02.Skill_Ative();
+            }
         }
     }
 }

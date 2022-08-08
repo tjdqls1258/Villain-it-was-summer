@@ -8,10 +8,7 @@ public class Skill1 : Skill
     {
         Debug.Log("스킬 1 발동");
     }
-    public override void Passive_Ative()
-    {
-        Debug.Log("패시브");
-    }
+
     public override void Cancel_Skill()
     {
         Debug.Log("스킬 끝 발동");

@@ -18,7 +18,7 @@ public class Player_Down_Jump : MonoBehaviour
 
     private IEnumerator Return_Layer()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.4f);
         Parent.gameObject.layer = 6;
     }
 }

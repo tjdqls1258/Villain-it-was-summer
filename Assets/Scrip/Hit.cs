@@ -27,8 +27,8 @@ public class Hit : MonoBehaviour
 
     private void GetDamage(float Damage)
     {
-        Data.iHP -= Damage;
-        if (Data.iHP <= 0)
+        Data.fHP -= Damage;
+        if (Data.fHP <= 0)
         {
             Die();
         }
@@ -90,7 +90,6 @@ public class Hit : MonoBehaviour
         }
         
         Is_Hit = false;
-        Debug.Log(gameObject.name + " : º¹±Í");
     }
 
 }
