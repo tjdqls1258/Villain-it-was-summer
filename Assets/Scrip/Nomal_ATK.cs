@@ -34,7 +34,7 @@ public class Nomal_ATK : Skill
     {
         yield return new WaitForSeconds(0.1f);
         ATK_Area.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         ATK_Area.SetActive(false);
         yield return new WaitForSeconds(unit.fAttack_Delay - 0.2f);
         Is_ATK = true;

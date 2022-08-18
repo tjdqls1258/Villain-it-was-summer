@@ -1,0 +1,12 @@
+{
+  "ITEAM_TABLE": [
+    {
+      "ITEAM_ID": 10001,
+      "ITEAM_NAME": "대검"
+    },
+    {
+      "ITEAM_ID": 10002,
+      "ITEAM_NAME": "도끼"
+    }
+  ]
+}

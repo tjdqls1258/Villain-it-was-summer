@@ -20,4 +20,9 @@ public class Animation_Controller : MonoBehaviour
     {
         Animator_Con.SetTrigger("Skill");
     }
+
+    public void Toggle_Hit()
+    {
+        Animator_Con.SetTrigger("Hit");
+    }
 }

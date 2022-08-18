@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Skill_Type { Start = -1,PASSIVE, ACTIVE, End }
+
 public abstract class Skill : MonoBehaviour
 {
-    public enum Skill_Type { PASSIVE, ACTIVE }
     public Skill_Type skill_Type = Skill_Type.ACTIVE;
     public string Skill_Tag = "None";
     public float Skill_CoolTime = 10f;

@@ -7,10 +7,14 @@ public class Hit : MonoBehaviour
     [SerializeField] private float Swap_Speed = 0.05f;
     [SerializeField] private float Hit_Invincible_Time = 0.5f;
     [SerializeField] private Color[] Hit_Color;
+    [SerializeField] private GameObject Die_Effect;
+    [SerializeField] private GameObject Hit_Effect;
 
     public bool Is_Hit = false;
     public float Reset_Hit_Time = 0.5f;
     [SerializeField] private SpriteRenderer[] sprite;
+    [SerializeField] private Rigidbody2D rigid;
+    public Animation_Controller animation_Con;
     private Unit Data;
 
     private void Awake()
@@ -37,6 +41,10 @@ public class Hit : MonoBehaviour
     private void Die()
     {
         Drop_Item();
+        if (Die_Effect != null)
+        {
+            Instantiate(Die_Effect, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 
@@ -49,10 +57,14 @@ public class Hit : MonoBehaviour
         Debug.Log("아이템 드랍");
     }
 
-    public void Player_Is_Hit(float Damage)
+    public void Player_Is_Hit(float Damage, Vector2 HitPos)
     {
         if (!Is_Hit)
         {
+            animation_Con.Toggle_Hit();
+            rigid.AddForce(HitPos * -3.0f, ForceMode2D.Impulse);
+            Hit_Effect.transform.localPosition = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0);
+            Hit_Effect.SetActive(true);
             StartCoroutine(Reset_Hit());
             GetDamage(Damage);
             Is_Hit = true;
@@ -88,7 +100,7 @@ public class Hit : MonoBehaviour
             Hit_Color[count].a = 1.0f;
             sprite[count].color = Hit_Color[count];
         }
-        
+        Hit_Effect.SetActive(false);
         Is_Hit = false;
     }
 
