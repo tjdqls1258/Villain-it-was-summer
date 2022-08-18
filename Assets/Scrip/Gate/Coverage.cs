@@ -21,21 +21,13 @@ public class Coverage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform.tag == "Player")
-        {
-            sprite.enabled = false;
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKey(KeyCode.C))
             {
-
+                Destroy(gameObject);
                 Debug.Log("보상을 얻음.");
             }
         }

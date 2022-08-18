@@ -9,7 +9,7 @@ public class Stage_Clear : MonoBehaviour
     {
         if(collision.transform.tag == "Player" )
         {
-            if(Input.GetKeyDown(KeyCode.X))
+            if(Input.GetKey(KeyCode.C))
             {
                 Debug.Log("다음 스테이지로");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
