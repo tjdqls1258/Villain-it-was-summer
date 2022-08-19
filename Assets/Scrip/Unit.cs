@@ -26,7 +26,7 @@ public class Unit : MonoBehaviour
 
     public Skill Find_Skill_With_Tag(string _tag)
     {
-        int index = skill_list.FindIndex(index => index.Skill_Tag == _tag);
+        int index = skill_list.FindIndex(index => index.skill_data.Skill_Tag == _tag);
         return skill_list[index];
     }
 }

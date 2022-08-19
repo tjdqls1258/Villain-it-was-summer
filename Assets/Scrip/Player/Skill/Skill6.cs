@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill1 : Skill
+public class Skill6 : Skill
 {
     private void Awake()
     {
-        this.skill_data.SkillName = GetType().ToString();
+        skill_data.SkillName = GetType().ToString();
     }
     public override void Skill_Ative()
     {

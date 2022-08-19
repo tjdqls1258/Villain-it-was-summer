@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill1 : Skill
+public class Skill4 : Skill
 {
     private void Awake()
     {
