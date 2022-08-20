@@ -15,6 +15,7 @@ public abstract class Skill : MonoBehaviour
         public float Skill_CoolTime = 10f;
     }
     public Skill_Data skill_data = new Skill_Data();
+    public GameObject Skill_Effect_List;
     public Sprite Skill_Icon;
     public abstract void Skill_Ative();
     public abstract void Cancel_Skill();

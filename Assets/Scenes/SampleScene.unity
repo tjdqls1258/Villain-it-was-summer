@@ -444,7 +444,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1376433099}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &53572468
 MonoBehaviour:
@@ -631,6 +631,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 21300000, guid: a6df9a6c78f39b74e98c66eb37211ad3, type: 3}
 --- !u!114 &151473193
 MonoBehaviour:
@@ -649,6 +650,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: -8937499057154260928, guid: 267c7fb536f99514ea7c4e7236d4bdf8, type: 3}
 --- !u!114 &151473194
 MonoBehaviour:
@@ -667,6 +669,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 4668938655123782945, guid: 179f77b4a77508644bb0e4717e8add6a, type: 3}
 --- !u!114 &151473195
 MonoBehaviour:
@@ -685,6 +688,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 5223213533427645220, guid: c6a5efa382266954e847098019d55dc9, type: 3}
 --- !u!114 &151473196
 MonoBehaviour:
@@ -703,6 +707,7 @@ MonoBehaviour:
     skill_Type: 0
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 5902650331669622779, guid: d06e0fb5c21f64348bee8578bf96b687, type: 3}
 --- !u!114 &151473197
 MonoBehaviour:
@@ -721,6 +726,7 @@ MonoBehaviour:
     skill_Type: 0
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 5902650331669622779, guid: d06e0fb5c21f64348bee8578bf96b687, type: 3}
 --- !u!114 &151473198
 MonoBehaviour:
@@ -739,6 +745,7 @@ MonoBehaviour:
     skill_Type: 0
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 21300000, guid: 72fed44d96691e3409ada20f1e2d8fd3, type: 3}
 --- !u!114 &151473199
 MonoBehaviour:
@@ -757,6 +764,7 @@ MonoBehaviour:
     skill_Type: 0
     Skill_Tag: None
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 21300000, guid: bd7e921e22f8f2e468475a7187870c40, type: 3}
 --- !u!114 &151473200
 MonoBehaviour:
@@ -1291,7 +1299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &317312182
 PrefabInstance:
@@ -1659,7 +1667,7 @@ Transform:
   m_Children:
   - {fileID: 122580167}
   m_Father: {fileID: 1376433099}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1672,6 +1680,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1711,7 +1720,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 60
   orthographic: 1
   orthographic size: 10
@@ -1739,12 +1748,28 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1376433099}
+  m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a281aace8098bbb4c88b68c560ffeccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1376433099}
+  speed: 0
+  Center: {x: 19, y: 7}
+  Size: {x: 55, y: 25}
 --- !u!1 &584768206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,56 +1828,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3510437, y: 0.55103636}
   m_EdgeRadius: 0
---- !u!1 &587488831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 587488833}
-  - component: {fileID: 587488832}
-  m_Layer: 0
-  m_Name: Skill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &587488832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587488831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c35b535032f91e458085db5fc4530b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skill_data:
-    SkillName: 
-    skill_Type: 1
-    Skill_Tag: None
-    Skill_CoolTime: 10
-  Skill_Icon: {fileID: 0}
---- !u!4 &587488833
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587488831}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.134348, y: 8.760017, z: -0.010350011}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664384758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2237,7 @@ Transform:
   - {fileID: 443602824}
   - {fileID: 71155614}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &860475563
 MonoBehaviour:
@@ -2379,6 +2354,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: ATK
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 0}
   unit: {fileID: 860475568}
   animation_Con: {fileID: 860475571}
@@ -2401,6 +2377,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: Move
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 0}
   unit: {fileID: 860475568}
   animation_Con: {fileID: 860475571}
@@ -2941,7 +2918,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1376433099}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1146980345
 BoxCollider2D:
@@ -3137,7 +3114,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1363110179}
-  - {fileID: 519420032}
   - {fileID: 1146980344}
   - {fileID: 53572467}
   - {fileID: 467728368}
@@ -3145,7 +3121,7 @@ Transform:
   - {fileID: 1915668175}
   - {fileID: 874414757}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1376433101
 BoxCollider2D:
@@ -3268,9 +3244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4420fa951d27074fa9fb8f66aa8e362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_List: []
-  skill01: {fileID: 587488832}
+  skill01: {fileID: 0}
   skill02: {fileID: 0}
+  ATK_area: {fileID: 467728368}
 --- !u!114 &1376433108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3315,6 +3291,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: ATK
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 0}
   unit: {fileID: 1376433106}
   animation_Con: {fileID: 1376433109}
@@ -3337,6 +3314,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: Move
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 0}
   unit: {fileID: 1376433106}
   animation_Con: {fileID: 1376433109}
@@ -3357,6 +3335,7 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: Dash
     Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
   Skill_Icon: {fileID: 0}
   unit: {fileID: 1376433106}
   rigid: {fileID: 1376433102}
@@ -8248,7 +8227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1376433099}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730244315
 GameObject:
