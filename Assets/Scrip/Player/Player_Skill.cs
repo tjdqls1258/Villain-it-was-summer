@@ -11,7 +11,7 @@ public class Player_Skill : MonoBehaviour
         GameObject skill_manager = GameObject.Find("Skill Manager");
         if (skill_manager == null)
         {
-            //return;
+            return;
         }
         //skill01 = skill_manager.GetComponent<Skill_Inventory>().Selet_Ative;
         //skill02 = skill_manager.GetComponent<Skill_Inventory>().Selet_Passive;
