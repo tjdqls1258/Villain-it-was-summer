@@ -25,4 +25,14 @@ public class Animation_Controller : MonoBehaviour
     {
         Animator_Con.SetTrigger("Hit");
     }
+
+    public void Toggle_Die()
+    {
+        Animator_Con.SetTrigger("Dead");
+    }
+
+    public float CurrentAnimationLength()
+    {
+        return Animator_Con.GetCurrentAnimatorStateInfo(0).length;
+    }
 }

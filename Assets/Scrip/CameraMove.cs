@@ -13,10 +13,22 @@ public class CameraMove : MonoBehaviour
     float Heigtht;
     float Width;
 
+    public void Set_Box(Vector2 center, Vector2 size)
+    {
+        Center = center;
+        Size = size;
+    }
+
     private void Start()
     {
         Heigtht = Camera.main.orthographicSize;
         Width = Heigtht * Screen.width / Screen.height;
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        Destroy(GameObject.Find("Main Camera"));
     }
 
     private void OnDrawGizmos()

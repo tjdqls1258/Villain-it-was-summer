@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public enum State { IDLE, MOVE, ATK, HIT }
+    public enum State { IDLE, MOVE, ATK, HIT, DIE }
     public State state = State.IDLE;
     public float fDistance = 2f;
     public float fMove_Spd = 1f;
@@ -28,5 +28,12 @@ public class Unit : MonoBehaviour
     {
         int index = skill_list.FindIndex(index => index.skill_data.Skill_Tag == _tag);
         return skill_list[index];
+    }
+
+    public Skill[] Find_Skills_With_Tag(string _tag)
+    {
+        List<Skill> skills = new List<Skill>();
+        skills = skill_list.FindAll(index => index.skill_data.Skill_Tag == _tag);
+        return skills.ToArray();
     }
 }

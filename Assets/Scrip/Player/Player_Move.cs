@@ -24,10 +24,15 @@ public class Player_Move : MonoBehaviour
 
     private void Update()
     {
+        if(player.state == Unit.State.DIE)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             move.Set_Target_pos(-transform.right);
             move.Skill_Ative();
+            player.Change_State(Unit.State.MOVE);
             if (Input.GetKeyDown(KeyCode.X) )
             {
                 dash.Set_Dash_Vector(Vector3.left);
@@ -38,6 +43,7 @@ public class Player_Move : MonoBehaviour
         {
             move.Set_Target_pos(transform.right);
             move.Skill_Ative();
+            player.Change_State(Unit.State.MOVE);
             if (Input.GetKeyDown(KeyCode.X))
             {
                 dash.Set_Dash_Vector(Vector3.right);
@@ -47,6 +53,7 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             move.Cancel_Skill();
+            player.Change_State(Unit.State.IDLE);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -58,6 +65,7 @@ public class Player_Move : MonoBehaviour
         {
             move.Cancel_Skill();
             atk.Skill_Ative();
+            player.Change_State(Unit.State.ATK);
         }
     }
 
@@ -73,7 +81,7 @@ public class Player_Move : MonoBehaviour
             {
                 return;
             }
-
+            player.Change_State(Unit.State.MOVE);
             rigid.AddForce(Vector2.up * player.Jump_Power, ForceMode2D.Impulse);
         }
     }

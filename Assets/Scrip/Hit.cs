@@ -16,7 +16,7 @@ public class Hit : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid;
     public Animation_Controller animation_Con;
     private Unit Data;
-
+    public GameObject ATK_area;
     private void Awake()
     {
         Data = GetComponent<Unit>();
@@ -41,11 +41,31 @@ public class Hit : MonoBehaviour
     private void Die()
     {
         Drop_Item();
+
+        if(ATK_area != null)
+        {
+            ATK_area.SetActive(false);
+        }
+
         if (Die_Effect != null)
         {
             Instantiate(Die_Effect, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
+        animation_Con.Toggle_Die();
+        Data.Change_State(Unit.State.DIE);
+        StartCoroutine(Destroy_Self());
+    }
+
+    IEnumerator Destroy_Self()
+    {
+        yield return new WaitForSeconds(animation_Con.CurrentAnimationLength());
+        if (transform.parent != null)
+        {
+            yield return new WaitForSeconds(animation_Con.CurrentAnimationLength());
+            transform.position = new Vector3(0, transform.position.y, 0);
+            transform.parent.gameObject.SetActive(false);
+        }
+        else { Destroy(gameObject, animation_Con.CurrentAnimationLength()); }
     }
 
     private void Drop_Item()
