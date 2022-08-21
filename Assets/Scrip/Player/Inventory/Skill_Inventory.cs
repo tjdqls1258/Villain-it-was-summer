@@ -92,9 +92,17 @@ public class Skill_Inventory : MonoBehaviour
         switch(_skill.skill_Type)
         {
             case Skill_Type.ACTIVE:
+                if (skillList.Ative_SkillList.Contains(_skill))
+                {
+                    break;
+                }
                 skillList.Ative_SkillList.Add(_skill);
                 break;
             case Skill_Type.PASSIVE:
+                if (skillList.Passive_SkillList.Contains(_skill))
+                {
+                    break;
+                }
                 skillList.Passive_SkillList.Add(_skill);
                 break;
         }
