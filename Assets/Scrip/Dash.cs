@@ -37,17 +37,23 @@ public class Dash : Skill
 
     private void Dash_ToVector()
     {
-        Is_Dsah = false;
-        rigid.AddForce(_Dash_Vector * unit.fDash_Power, ForceMode2D.Impulse);
-        StartCoroutine(Dash_Timmer());
+        if (Is_Dsah)
+        {
+            Is_Dsah = false;
+            rigid.AddForce(_Dash_Vector * unit.fDash_Power, ForceMode2D.Impulse);
+            StartCoroutine(Dash_Timmer());
+        }
     }
 
     private IEnumerator Dash_Timmer()
     {
         Dash_Effect.SetActive(true);
+        gameObject.layer = 11;
         yield return new WaitForSeconds(0.2f);
+        gameObject.layer = 6;
         rigid.velocity = new Vector3(0.0f, rigid.velocity.y, 0.0f);
         Dash_Effect.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
         Is_Dsah = true;
     }
 }
