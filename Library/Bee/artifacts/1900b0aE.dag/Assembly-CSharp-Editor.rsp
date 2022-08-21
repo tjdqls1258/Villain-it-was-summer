@@ -115,6 +115,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Users/tjdql/Desktop/유니티/빌런,여름이였다/Villain-it-was-summer-Project/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/log4netPlastic.dll"
@@ -417,6 +418,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.ref.dll"
@@ -436,12 +439,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/SPUM/Script/Editor/SPUM_Editor.cs"
-"Assets/SPUM/Script/Editor/SPUM_SpriteEditor.cs"
-"Assets/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_Eye.cs"
-"Assets/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_SpriteEdit.cs"
-"Assets/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_Sync.cs"
-"Assets/SPUM/Sprite_SheetExporter(Beta)/Script/Editor/SPUM_Exporter.cs"
+"Assets/Image/SPUM/Script/Editor/SPUM_Editor.cs"
+"Assets/Image/SPUM/Script/Editor/SPUM_SpriteEditor.cs"
+"Assets/Image/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_Eye.cs"
+"Assets/Image/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_SpriteEdit.cs"
+"Assets/Image/SPUM/Sprite_Editor(Beta)/Script/Editor/SPUM_Sync.cs"
+"Assets/Image/SPUM/Sprite_SheetExporter(Beta)/Script/Editor/SPUM_Exporter.cs"
 -langversion:9.0
 
 /deterministic

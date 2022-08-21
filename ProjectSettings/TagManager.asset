@@ -8,6 +8,7 @@ TagManager:
   - Out_Floor
   - Monster_ATK
   - Monster
+  - Player_ATK
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Monster
   - Monster_ATK
   - Player_ATK
-  - 
+  - Dash
   - 
   - 
   - 
