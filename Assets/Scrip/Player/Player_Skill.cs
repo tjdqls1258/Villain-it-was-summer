@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Player_Skill : MonoBehaviour
 {
     public Skill skill01, skill02;
     public Transform ATK_area;
+    public Image Ative_Skill;
+    public Image Passive_Skill;
     private void Awake()
     {
         GameObject skill_manager = GameObject.Find("Skill Manager");
@@ -13,15 +15,20 @@ public class Player_Skill : MonoBehaviour
         {
             return;
         }
-        //skill01 = skill_manager.GetComponent<Skill_Inventory>().Selet_Ative;
-        //skill02 = skill_manager.GetComponent<Skill_Inventory>().Selet_Passive;
+        skill01 = skill_manager.GetComponent<Skill_Inventory>().Selet_Ative;
+        skill02 = skill_manager.GetComponent<Skill_Inventory>().Selet_Passive;
+
         if (skill01 != null)
         {
-            gameObject.AddComponent(skill01.GetType());
+            skill01.transform.GetComponent<Button>().enabled = false;
+            skill01.transform.GetComponent<Image>().enabled = false;
+            Ative_Skill.sprite = skill01.Skill_Icon;
         }
         if (skill02 != null)
         {
-            gameObject.AddComponent(skill02.GetType());
+            skill02.transform.GetComponent<Button>().enabled = false;
+            skill02.transform.GetComponent<Image>().enabled = false;
+            Passive_Skill.sprite = skill02.Skill_Icon;
         }
     }
     private void Update()
@@ -29,16 +36,11 @@ public class Player_Skill : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             GetComponentInChildren<Animator>().SetTrigger("Skill");
-            Instantiate(skill01.Skill_Effect_List, ATK_area.position, Quaternion.identity);
-            skill01.Skill_Ative();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            GetComponentInChildren<Animator>().SetTrigger("Skill");
-            if (skill02 != null)
+            if (skill01.Skill_Effect_List != null)
             {
-                skill02.Skill_Ative();
+                Instantiate(skill01.Skill_Effect_List, ATK_area.position, Quaternion.identity);
             }
+            skill01.Skill_Ative();
         }
     }
 }

@@ -17,6 +17,7 @@ public class Coverage : MonoBehaviour
         if(collision.transform.tag =="Player")
         {
             Debug.Log("스테이지 클리어!");
+            collision.GetComponent<Animation_Controller>().Is_Move(0);
             sprite.enabled = true;
         }
     }

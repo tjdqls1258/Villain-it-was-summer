@@ -12,8 +12,13 @@ public class Stage_Clear : MonoBehaviour
             if(Input.GetKey(KeyCode.C))
             {
                 Debug.Log("다음 스테이지로");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                NextStage(SceneManager.GetActiveScene().buildIndex);
             }
         }
+    }
+
+    public void NextStage(int Level)
+    {
+        SceneManager.LoadScene(Level + 1);
     }
 }

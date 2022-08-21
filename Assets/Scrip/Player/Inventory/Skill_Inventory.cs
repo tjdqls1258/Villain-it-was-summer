@@ -103,14 +103,24 @@ public class Skill_Inventory : MonoBehaviour
 
     public void Set_AtiveSkill(Skill skill)
     {
+        if (Selet_Ative != null)
+        {
+            Selet_Ative.transform.parent = Ative_ContentObject.transform;
+        }
         SelectedAtiveImage.sprite = skill.Skill_Icon;
         Selet_Ative = skill;
+        Selet_Ative.transform.parent = gameObject.transform;
         Debug.Log(skill.skill_data.SkillName);
     }
     public void Set_PassiveSkill(Skill skill)
     {
+        if (Selet_Passive != null)
+        {
+            Selet_Passive.transform.parent = Passive_ContenObject.transform;
+        }
         SelectedPassiveImage.sprite = skill.Skill_Icon;
         Selet_Passive = skill;
+        Selet_Passive.transform.parent = gameObject.transform;
         Debug.Log(skill.skill_data.SkillName);
     }
 

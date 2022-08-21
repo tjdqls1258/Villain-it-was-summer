@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : Skill
 {
@@ -9,7 +10,7 @@ public class Move : Skill
     private Vector3 Target;
     private Vector3 Local_Size;
 
-    public void Awake()
+    private void Awake()
     {
         Local_Size = transform.localScale;
     }
