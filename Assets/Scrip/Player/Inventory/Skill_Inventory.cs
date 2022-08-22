@@ -20,6 +20,8 @@ public class Skill_Inventory : MonoBehaviour
     public Image SelectedAtiveImage;
     public Image SelectedPassiveImage;
 
+    public static Skill_Inventory Instance;
+
     [System.Serializable]
     class SkillList
     {
@@ -31,6 +33,12 @@ public class Skill_Inventory : MonoBehaviour
 
     public void Awake()
     {
+        if(Instance != null)
+        {
+            Destroy(Instance.gameObject);
+            Instance = this;
+        }
+
         DontDestroyOnLoad(gameObject);
         Assembly assembly = Assembly.GetExecutingAssembly();
 
@@ -117,7 +125,7 @@ public class Skill_Inventory : MonoBehaviour
         }
         SelectedAtiveImage.sprite = skill.Skill_Icon;
         Selet_Ative = skill;
-        Selet_Ative.transform.parent = gameObject.transform;
+        
         Debug.Log(skill.skill_data.SkillName);
     }
     public void Set_PassiveSkill(Skill skill)
@@ -128,8 +136,15 @@ public class Skill_Inventory : MonoBehaviour
         }
         SelectedPassiveImage.sprite = skill.Skill_Icon;
         Selet_Passive = skill;
-        Selet_Passive.transform.parent = gameObject.transform;
+        
         Debug.Log(skill.skill_data.SkillName);
+    }
+
+    public void Read_ToGame()
+    {
+        Selet_Ative.transform.parent = gameObject.transform;
+        Selet_Passive.transform.parent = gameObject.transform;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
