@@ -14,6 +14,10 @@ public class Hit : MonoBehaviour
     public float Reset_Hit_Time = 0.5f;
     [SerializeField] private SpriteRenderer[] sprite;
     [SerializeField] private Rigidbody2D rigid;
+
+    [SerializeField] private GameObject DamageText;
+    [SerializeField] private Transform DamageTextPos;
+
     public Animation_Controller animation_Con;
     private Unit Data;
     public GameObject ATK_area;
@@ -87,6 +91,11 @@ public class Hit : MonoBehaviour
             Hit_Effect.SetActive(true);
             StartCoroutine(Reset_Hit());
             GetDamage(Damage);
+            if (DamageText != null && DamageTextPos != null)
+            {
+                GameObject Text = Instantiate(DamageText, DamageTextPos.position, Quaternion.identity);
+                Text.GetComponent<SetDamage_Text>().SetDamageText((int)Damage);
+            }
             Is_Hit = true;
         }
     }

@@ -2519,6 +2519,8 @@ MonoBehaviour:
   Reset_Hit_Time: 0.5
   sprite: []
   rigid: {fileID: 1376433102}
+  DamageText: {fileID: 0}
+  DamageTextPos: {fileID: 0}
   animation_Con: {fileID: 1376433109}
   ATK_area: {fileID: 467728367}
 --- !u!114 &1376433106
