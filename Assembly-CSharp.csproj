@@ -58,9 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\MinAttribute.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_EyeSet.cs" />
+    <Compile Include="Assets\Scrip\SetDamage_Text.cs" />
     <Compile Include="Assets\Scrip\DataSaver\Gogle_Seet.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Skill.cs" />
     <Compile Include="Assets\Scrip\Nomal_ATK.cs" />
+    <Compile Include="Assets\Scrip\Spawn_Cam_Setting.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Manager.cs" />
     <Compile Include="Assets\Scrip\DataSaver\CSVReader.cs" />
@@ -92,8 +94,10 @@
     <Compile Include="Assets\Scrip\Player\Cam_Shacking.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill8.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Down_Jump.cs" />
+    <Compile Include="Assets\Scrip\Monster\Test Boss\SummonDely.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Test.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Jump_Under_Floor.cs" />
+    <Compile Include="Assets\Scrip\Danger_Singe.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
     <Compile Include="Assets\Scrip\Gate\Coverage.cs" />
     <Compile Include="Assets\Scrip\Collision_Event.cs" />
@@ -111,6 +115,7 @@
     <Compile Include="Assets\Scrip\DataSaver\CSV_Data.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
+    <Compile Include="Assets\Scrip\Monster\Test Boss\SummonSkill.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_Editor(Beta)\Script\SpriteSyncManager.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill7.cs" />
     <Compile Include="Assets\Scrip\Gate\Stage_Clear.cs" />
@@ -125,7 +130,9 @@
     <Compile Include="Assets\Scrip\Player\Inventory\Skill_Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Bringer Of Death\License.txt" />
     <None Include="Assets\Image\SPUM\ReadMe - 1.6.0.txt" />
+    <None Include="Assets\Bringer Of Death\Contact.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

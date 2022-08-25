@@ -17,6 +17,7 @@ public class Spawn_Cam_Setting : MonoBehaviour
         Camera = GameObject.Find("Cam");
         Player = GameObject.Find("Player");
 
+        Player.GetComponent<Animation_Controller>().Is_Move(0);
         Camera.GetComponent<CameraMove>().Set_Box(Center, Size);
         Player.transform.position = transform.position;
     }
