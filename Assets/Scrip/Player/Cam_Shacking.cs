@@ -8,7 +8,13 @@ public class Cam_Shacking : MonoBehaviour
     public GameObject cam;
     public GameObject CamParent;
     public PostProcessVolume post;
-    // Start is called before the first frame update
+    public Player player;
+
+// Start is called before the first frame update
+private void Awake()
+    {
+        player = GetComponentInParent<Player>();
+    }
     void OnEnable()
     {
         post = CamParent.GetComponent<PostProcessVolume>();
@@ -34,5 +40,6 @@ public class Cam_Shacking : MonoBehaviour
         post.profile.GetSetting<Vignette>().color.value = Color.red;
         yield return new WaitForSeconds(durtion);
         post.profile.GetSetting<Vignette>().color.value = Color.white;
+
     }
 }

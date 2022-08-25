@@ -46,7 +46,7 @@ public class Monster_AI : MonoBehaviour
             return;
         }
         Look_Player();
-        if(skill_on)
+        if(skill_on && Skills.Length != 0)
         {
             StartCoroutine(UsingSkill());
         }
@@ -97,14 +97,11 @@ public class Monster_AI : MonoBehaviour
 
     private IEnumerator UsingSkill()
     {
-        if (Skills.Length == 0 || monster.state != Unit.State.ATK)
+        if (monster.state != Unit.State.ATK || !skill_on)
         {
             yield break;
         }
-        if(!skill_on)
-        {
-            yield break;
-        }
+
         if (Vector3.Distance(transform.position, Player.transform.position) <= ATK_Distance)
         {
             skill_number = Random.Range(0, Skills.Length-1);

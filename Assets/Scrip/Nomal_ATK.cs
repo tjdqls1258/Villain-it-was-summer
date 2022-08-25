@@ -32,10 +32,12 @@ public class Nomal_ATK : Skill
 
     private IEnumerator ATK()
     {
+        unit.Change_State(Unit.State.ATK);
         yield return new WaitForSeconds(0.1f);
         ATK_Area.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         ATK_Area.SetActive(false);
+        unit.Change_State(Unit.State.IDLE);
         yield return new WaitForSeconds(unit.fAttack_Delay - 0.2f);
         Is_ATK = true;
     }

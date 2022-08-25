@@ -9,9 +9,12 @@ public class Move : Skill
     public Animation_Controller animation_Con;
     private Vector3 Target;
     private Vector3 Local_Size;
+    private Rigidbody2D rigid;
+    private RaycastHit2D hit;
 
     private void Awake()
     {
+        rigid = GetComponent<Rigidbody2D>();
         Local_Size = transform.localScale;
     }
 
@@ -22,7 +25,7 @@ public class Move : Skill
         Dir_Pos.z = 0;
 
         transform.position += Dir_Pos * unit.fMove_Spd * Time.deltaTime;
-        if(Dir_Pos.x < 0)
+        if (Dir_Pos.x < 0)
         {
             transform.localScale = new Vector3(Local_Size.x, Local_Size.y, Local_Size.z);
         }

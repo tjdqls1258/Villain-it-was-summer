@@ -13,8 +13,10 @@ public class Player_Move : MonoBehaviour
     private Nomal_ATK atk;
     private Dash dash;
     private Rigidbody2D rigid;
+    public GameObject DangerSing;
 
-    private void Awake()
+
+private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         move = (Move)player.Find_Skill_With_Tag("Move");
@@ -65,7 +67,18 @@ public class Player_Move : MonoBehaviour
         {
             move.Cancel_Skill();
             atk.Skill_Ative();
-            player.Change_State(Unit.State.ATK);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (player.fHP <= (player.MaxHp * 0.2f))
+        {
+            DangerSing.SetActive(true);
+        }
+        else
+        {
+            DangerSing.SetActive(false);
         }
     }
 

@@ -125,8 +125,6 @@ public class Skill_Inventory : MonoBehaviour
         }
         SelectedAtiveImage.sprite = skill.Skill_Icon;
         Selet_Ative = skill;
-        
-        Debug.Log(skill.skill_data.SkillName);
     }
     public void Set_PassiveSkill(Skill skill)
     {
@@ -136,8 +134,6 @@ public class Skill_Inventory : MonoBehaviour
         }
         SelectedPassiveImage.sprite = skill.Skill_Icon;
         Selet_Passive = skill;
-        
-        Debug.Log(skill.skill_data.SkillName);
     }
 
     public void Read_ToGame()

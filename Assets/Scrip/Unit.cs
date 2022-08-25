@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
     public float fDistance = 2f;
     public float fMove_Spd = 1f;
     public float fAttack_Delay = 3f;
+    public float MaxHp = 100;
     public float fHP = 100;
     public float fDash_Power = 5.0f;
     public int iMP = 0;
@@ -18,6 +19,11 @@ public class Unit : MonoBehaviour
     public int iMDEF = 5;
 
     public List<Skill> skill_list;
+
+    private void Awake()
+    {
+        fHP = MaxHp;
+    }
 
     public void Change_State(Unit.State state)
     {
