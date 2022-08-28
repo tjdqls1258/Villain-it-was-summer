@@ -138,8 +138,14 @@ public class Skill_Inventory : MonoBehaviour
 
     public void Read_ToGame()
     {
-        Selet_Ative.transform.parent = gameObject.transform;
-        Selet_Passive.transform.parent = gameObject.transform;
+        if (Selet_Ative != null)
+        {
+            Selet_Ative.transform.parent = gameObject.transform;
+        }
+        if (Selet_Passive != null)
+        {
+            Selet_Passive.transform.parent = gameObject.transform;
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

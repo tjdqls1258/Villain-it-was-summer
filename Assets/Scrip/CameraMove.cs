@@ -40,6 +40,10 @@ public class CameraMove : MonoBehaviour
     void LateUpdate()
     {
         //transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), Time.deltaTime * speed);
+        if(target == null)
+        {
+            return;
+        }
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
         float lx = Size.x * 0.5f - Width;

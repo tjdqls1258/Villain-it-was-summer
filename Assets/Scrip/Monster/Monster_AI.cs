@@ -54,6 +54,10 @@ public class Monster_AI : MonoBehaviour
 
     private void Look_Player()
     {
+        if(Player == null)
+        {
+            return;
+        }
         This_And_Player_Distance = Player.transform.position - transform.position;
         Is_Ground = Physics2D.Raycast(transform.position, -transform.up, Ray_Distance, Layer_Mask);
         

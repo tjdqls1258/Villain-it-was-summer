@@ -20,7 +20,7 @@ public class Unit : MonoBehaviour
 
     public List<Skill> skill_list;
 
-    private void Awake()
+    private void OnEnable()
     {
         fHP = MaxHp;
     }

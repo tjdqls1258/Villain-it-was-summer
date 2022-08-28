@@ -12,16 +12,20 @@ public class Player_Move : MonoBehaviour
     private Move move;
     private Nomal_ATK atk;
     private Dash dash;
+    private Hit hit;
     private Rigidbody2D rigid;
     public GameObject DangerSing;
+    private Cam_Shacking cam;
 
 
 private void Awake()
     {
+        cam = GetComponent<Cam_Shacking>();
         rigid = GetComponent<Rigidbody2D>();
         move = (Move)player.Find_Skill_With_Tag("Move");
         atk = (Nomal_ATK)player.Find_Skill_With_Tag("ATK");
         dash = (Dash)player.Find_Skill_With_Tag("Dash");
+        hit = GetComponent<Hit>();
     }
 
     private void Update()
@@ -30,6 +34,8 @@ private void Awake()
         {
             return;
         }
+
+        #region Movement
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             move.Set_Target_pos(-transform.right);
@@ -67,6 +73,13 @@ private void Awake()
         {
             move.Cancel_Skill();
             atk.Skill_Ative();
+        }
+        #endregion
+
+        if(hit.Is_Hit)
+        {
+            StartCoroutine(cam.CameraShake(0.1f, 0.01f, hit.Hit_Invincible_Time));
+            StartCoroutine(cam.ChagePost(0.1f, hit.Hit_Invincible_Time));
         }
     }
 

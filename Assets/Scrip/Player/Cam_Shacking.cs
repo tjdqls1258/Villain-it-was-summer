@@ -8,38 +8,50 @@ public class Cam_Shacking : MonoBehaviour
     public GameObject cam;
     public GameObject CamParent;
     public PostProcessVolume post;
-    public Player player;
+    public bool IsRun, IsRed;
 
 // Start is called before the first frame update
-private void Awake()
+    private void Awake()
     {
-        player = GetComponentInParent<Player>();
+        post = CamParent.GetComponent<PostProcessVolume>();
+        IsRun = false;
+        IsRed = false;
     }
     void OnEnable()
     {
-        post = CamParent.GetComponent<PostProcessVolume>();
-        StartCoroutine(CameraShake(0.1f, 0.01f));
-        StartCoroutine(ChagePost(0.1f));
-    }
-
-    public IEnumerator CameraShake(float durtion, float magnitude)
-    {
-        float timer = 0;
-        Vector3 cam_originapos = cam.transform.position;
-        while (timer<= durtion)
-        {
-            cam.transform.localPosition = Random.insideUnitCircle * magnitude * cam_originapos;
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, -10);
-            timer += Time.deltaTime;
-            yield return null;
-        }
         cam.transform.localPosition = new Vector3(0, 0, -10);
-    }
-    public IEnumerator ChagePost(float durtion)
-    {
-        post.profile.GetSetting<Vignette>().color.value = Color.red;
-        yield return new WaitForSeconds(durtion);
         post.profile.GetSetting<Vignette>().color.value = Color.white;
+    }
 
+    public IEnumerator CameraShake(float durtion, float magnitude , float Delay)
+    {
+        if (!IsRun)
+        {
+            IsRun = true;
+            float timer = 0;
+            Vector3 cam_originapos = cam.transform.position;
+            while (timer <= durtion)
+            {
+                cam.transform.localPosition = Random.insideUnitCircle * magnitude * cam_originapos;
+                cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, -10);
+                timer += Time.deltaTime;
+                yield return null;
+            }
+            cam.transform.localPosition = new Vector3(0, 0, -10);
+            yield return new WaitForSeconds(Delay - durtion);
+            IsRun = false;
+        }
+    }
+    public IEnumerator ChagePost(float durtion, float Delay)
+    {
+        if (!IsRed)
+        {
+            IsRun = true;
+            post.profile.GetSetting<Vignette>().color.value = Color.red;
+            yield return new WaitForSeconds(durtion);
+            post.profile.GetSetting<Vignette>().color.value = Color.white;
+            yield return new WaitForSeconds(Delay- durtion);
+            IsRed = false;
+        }
     }
 }

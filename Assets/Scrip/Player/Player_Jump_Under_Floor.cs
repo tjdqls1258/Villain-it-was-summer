@@ -16,6 +16,7 @@ public class Player_Jump_Under_Floor : MonoBehaviour
     {
         if (other.tag == "Floor")
         {
+            
             ChangeLayer();
         }
     }

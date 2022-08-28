@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hit : MonoBehaviour
 {
     [SerializeField] private float Swap_Speed = 0.05f;
-    [SerializeField] private float Hit_Invincible_Time = 0.5f;
+    public float Hit_Invincible_Time = 0.5f;
     [SerializeField] private Color[] Hit_Color;
     [SerializeField] private GameObject Die_Effect;
     [SerializeField] private GameObject Hit_Effect;
@@ -21,16 +21,29 @@ public class Hit : MonoBehaviour
     public Animation_Controller animation_Con;
     private Unit Data;
     public GameObject ATK_area;
+
     private void Awake()
     {
         Data = GetComponent<Unit>();
         sprite = GetComponentsInChildren<SpriteRenderer>();
         Hit_Color = new Color[sprite.Length];
+    }
 
-        for(int count = 0; count < sprite.Length; count++)
+    private void OnEnable()
+    {
+        for (int count = 0; count < sprite.Length; count++)
         {
             Hit_Color[count] = sprite[count].color;
+            Hit_Color[count].a = 1.0f;
+            sprite[count].color = Hit_Color[count];
         }
+
+        Is_Hit = false;
+        if (Hit_Effect != null)
+        {
+            Hit_Effect.SetActive(false);
+        }
+        ATK_area.SetActive(true);
     }
 
     private void GetDamage(float Damage)
@@ -55,6 +68,7 @@ public class Hit : MonoBehaviour
         {
             Instantiate(Die_Effect, transform.position, Quaternion.identity);
         }
+
         animation_Con.Toggle_Die();
         Data.Change_State(Unit.State.DIE);
         StartCoroutine(Destroy_Self());
@@ -81,14 +95,21 @@ public class Hit : MonoBehaviour
         Debug.Log("아이템 드랍");
     }
 
-    public void Player_Is_Hit(float Damage, Vector2 HitPos)
+    public void Player_Is_Hit(float Damage, Vector2 HitPower, Vector3 HitPos)
     {
         if (!Is_Hit)
         {
             animation_Con.Toggle_Hit();
-            rigid.AddForce(HitPos * -3.0f, ForceMode2D.Impulse);
-            Hit_Effect.transform.localPosition = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0);
-            Hit_Effect.SetActive(true);
+            rigid.AddForce(HitPower * -3.0f, ForceMode2D.Impulse);
+
+            if (Hit_Effect != null)
+            { 
+                Hit_Effect.transform.position = (HitPos - transform.position).normalized;
+                float posX = (HitPos.x-transform.position.x) - (HitPower.x * 3.0f);
+
+                Hit_Effect.transform.position = transform.position + new Vector3(Hit_Effect.transform.position.x + posX, (HitPos - transform.position).y, 0);
+                Hit_Effect.SetActive(true);
+            }
             StartCoroutine(Reset_Hit());
             GetDamage(Damage);
             if (DamageText != null && DamageTextPos != null)
@@ -129,7 +150,10 @@ public class Hit : MonoBehaviour
             Hit_Color[count].a = 1.0f;
             sprite[count].color = Hit_Color[count];
         }
-        Hit_Effect.SetActive(false);
+        if (Hit_Effect != null)
+        {
+            Hit_Effect.SetActive(false);
+        }
         Is_Hit = false;
     }
 
