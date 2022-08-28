@@ -61,8 +61,8 @@
     <Compile Include="Assets\Scrip\SetDamage_Text.cs" />
     <Compile Include="Assets\Scrip\DataSaver\Gogle_Seet.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Skill.cs" />
-    <Compile Include="Assets\Scrip\Nomal_ATK.cs" />
-    <Compile Include="Assets\Scrip\Spawn_Cam_Setting.cs" />
+    <Compile Include="Assets\Scrip\Unit\Nomal_ATK.cs" />
+    <Compile Include="Assets\Scrip\Monster\Spawn_Cam_Setting.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Manager.cs" />
     <Compile Include="Assets\Scrip\DataSaver\CSVReader.cs" />
@@ -72,12 +72,12 @@
     <Compile Include="Assets\Scrip\Dash.cs" />
     <Compile Include="Assets\Scrip\Item\Item.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Worker.cs" />
-    <Compile Include="Assets\Scrip\Move.cs" />
+    <Compile Include="Assets\Scrip\Unit\Move.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_Editor(Beta)\Script\SpriteSync.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifFrame.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Move.cs" />
-    <Compile Include="Assets\Scrip\Hit.cs" />
+    <Compile Include="Assets\Scrip\Unit\Hit.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Ect\SpritePos.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill2.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_SpriteList.cs" />
@@ -85,7 +85,6 @@
     <Compile Include="Assets\Scrip\CameraMove.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster_AI.cs" />
     <Compile Include="Assets\Scrip\Collision_Manger.cs" />
-    <Compile Include="Assets\Tile\Tile_Setting.cs" />
     <Compile Include="Assets\Image\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill5.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill1.cs" />
@@ -105,13 +104,13 @@
     <Compile Include="Assets\Image\SPUM\Script\SPUM_SpriteButtonST.cs" />
     <Compile Include="Assets\Scrip\DataSaver\JsonData.cs" />
     <Compile Include="Assets\Scrip\DataSaver\SetData.cs" />
+    <Compile Include="Assets\Scrip\Timer.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_Editor(Beta)\Script\SPUM_SpriteEditManager.cs" />
     <Compile Include="Assets\Scrip\Player\Player.cs" />
     <Compile Include="Assets\Scrip\Animation_Controller.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_HorseSpriteList.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Button.cs" />
     <Compile Include="Assets\Scrip\TitleUI.cs" />
-    <Compile Include="Assets\Effect\Travis Game Assets\Hit Impact Effects\Demo Scene\Scripts\HitImpactEffectsPreview.cs" />
     <Compile Include="Assets\Scrip\DataSaver\CSV_Data.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Recorder.cs" />
@@ -123,11 +122,12 @@
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Image\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill4.cs" />
-    <Compile Include="Assets\Scrip\Unit.cs" />
+    <Compile Include="Assets\Scrip\Unit\Unit.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\Effect\FX\Prefabs\Destory_Self.cs" />
     <Compile Include="Assets\Scrip\Player\Inventory\Skill_Inventory.cs" />
+    <Compile Include="Assets\Scrip\Unit\ATK_Effect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Bringer Of Death\License.txt" />
@@ -380,6 +380,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.4\Runtime\ThirdParty\clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>D:\unity\2021.3.1f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -759,17 +762,17 @@
     <Reference Include="Unity.2D.Tilemap.Extras">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -777,8 +780,11 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Autodesk.Fbx.Editor">
+      <HintPath>Library\ScriptAssemblies\Autodesk.Fbx.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Formats.Fbx.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -807,6 +813,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>Library\ScriptAssemblies\Autodesk.Fbx.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -816,11 +825,44 @@
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sequences.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Sequences.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sequences">
+      <HintPath>Library\ScriptAssemblies\Unity.Sequences.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Formats.Fbx.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Alembic.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Formats.Alembic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Alembic.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Formats.Alembic.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
