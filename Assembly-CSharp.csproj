@@ -70,7 +70,7 @@
     <Compile Include="Assets\Image\SPUM\Script\SPUM_AnimationController.cs" />
     <Compile Include="Assets\Scrip\Skill.cs" />
     <Compile Include="Assets\Scrip\Dash.cs" />
-    <Compile Include="Assets\Scrip\Item\Item.cs" />
+    <Compile Include="Assets\Scrip\Item\Item_Data.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Worker.cs" />
     <Compile Include="Assets\Scrip\Unit\Move.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\NeuQuant.cs" />
@@ -81,6 +81,7 @@
     <Compile Include="Assets\Image\SPUM\Script\Ect\SpritePos.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill2.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_SpriteList.cs" />
+    <Compile Include="Assets\Scrip\Unit\ATK_Effect.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\Scrip\CameraMove.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster_AI.cs" />
@@ -127,7 +128,11 @@
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\Effect\FX\Prefabs\Destory_Self.cs" />
     <Compile Include="Assets\Scrip\Player\Inventory\Skill_Inventory.cs" />
-    <Compile Include="Assets\Scrip\Unit\ATK_Effect.cs" />
+    <Compile Include="Assets\Scrip\Player\Inventory\Item_Inventory.cs" />
+    <Compile Include="Assets\Scrip\Item\Item_Slot.cs" />
+    <Compile Include="Assets\Scrip\Item\SlotManager.cs" />
+    <Compile Include="Assets\Scrip\Item\Weapon_Slot.cs" />
+    <Compile Include="Assets\Scrip\Item\Accessories_Slot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Bringer Of Death\License.txt" />

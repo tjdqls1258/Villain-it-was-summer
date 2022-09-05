@@ -6,6 +6,11 @@ public class Animation_Controller : MonoBehaviour
 {
     public Animator Animator_Con;
 
+    private void Awake()
+    {
+        Animator_Con = GetComponentInChildren<Animator>();
+    }
+
     public void Is_Move(float _moveSpeed)
     {
         Animator_Con.SetFloat("Move_Speed", _moveSpeed);
