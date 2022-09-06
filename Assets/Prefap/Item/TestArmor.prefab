@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1815339804486914956}
   - component: {fileID: 7326163200271870017}
   m_Layer: 0
-  m_Name: NomalWeapon_R
+  m_Name: TestArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,11 +48,13 @@ MonoBehaviour:
   Is_Twohand: 0
   Damage: 0
   Add_Hp: 0
-  Item_Type: 2
+  Item_Type: 4
   Atk_Speed: 0
   Move_Speed: 0
   Item_Image:
-  - {fileID: 21300000, guid: 99477209ff4c42647b8415904c4dbd85, type: 3}
+  - {fileID: -6505695957970812123, guid: 586c2a08ac707394793246dc422f8ede, type: 3}
+  - {fileID: 3257737980328237110, guid: 586c2a08ac707394793246dc422f8ede, type: 3}
+  - {fileID: -5502725330888511627, guid: 586c2a08ac707394793246dc422f8ede, type: 3}
   Skill: {fileID: 7326163200271870017}
 --- !u!114 &7326163200271870017
 MonoBehaviour:
@@ -72,4 +74,4 @@ MonoBehaviour:
     Skill_Tag: None
     Skill_CoolTime: 10
   Skill_Effect_List: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
-  Skill_Icon: {fileID: 21300000, guid: 99477209ff4c42647b8415904c4dbd85, type: 3}
+  Skill_Icon: {fileID: -6505695957970812123, guid: 586c2a08ac707394793246dc422f8ede, type: 3}
