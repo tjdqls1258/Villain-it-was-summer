@@ -94,9 +94,12 @@
     <Compile Include="Assets\Scrip\Player\Cam_Shacking.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill8.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Down_Jump.cs" />
+    <Compile Include="Assets\Scrip\Item\SlotManager.cs" />
     <Compile Include="Assets\Scrip\Monster\Test Boss\SummonDely.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Test.cs" />
     <Compile Include="Assets\Scrip\Player\Player_Jump_Under_Floor.cs" />
+    <Compile Include="Assets\Scrip\Player\Inventory\Item_Inventory.cs" />
+    <Compile Include="Assets\Scrip\Item\Item_Slot.cs" />
     <Compile Include="Assets\Scrip\Danger_Singe.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\ReflectionUtils.cs" />
     <Compile Include="Assets\Scrip\Gate\Coverage.cs" />
@@ -118,8 +121,10 @@
     <Compile Include="Assets\Scrip\Monster\Test Boss\SummonSkill.cs" />
     <Compile Include="Assets\Image\SPUM\Sprite_Editor(Beta)\Script\SpriteSyncManager.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill7.cs" />
+    <Compile Include="Assets\Scrip\Item\Accessories_Slot.cs" />
     <Compile Include="Assets\Scrip\Gate\Stage_Clear.cs" />
     <Compile Include="Assets\Scrip\Monster\Monster.cs" />
+    <Compile Include="Assets\Scrip\Item\Weapon_Slot.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\GifEncoder.cs" />
     <Compile Include="Assets\Image\SPUM\SoonsoonData\SoonsoonData.cs" />
     <Compile Include="Assets\Scrip\Player\Skill\Skill4.cs" />
@@ -128,11 +133,6 @@
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\Effect\FX\Prefabs\Destory_Self.cs" />
     <Compile Include="Assets\Scrip\Player\Inventory\Skill_Inventory.cs" />
-    <Compile Include="Assets\Scrip\Player\Inventory\Item_Inventory.cs" />
-    <Compile Include="Assets\Scrip\Item\Item_Slot.cs" />
-    <Compile Include="Assets\Scrip\Item\SlotManager.cs" />
-    <Compile Include="Assets\Scrip\Item\Weapon_Slot.cs" />
-    <Compile Include="Assets\Scrip\Item\Accessories_Slot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Bringer Of Death\License.txt" />

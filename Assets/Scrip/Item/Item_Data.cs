@@ -7,7 +7,7 @@ public class Item_Data : MonoBehaviour
     [Header("Item Information")]
     public bool Is_Twohand;
     public int Damage;
-    public int Add_Hp;
+    public float Add_Hp;
     public Equipment_Type Item_Type;
 
     public float Atk_Speed;

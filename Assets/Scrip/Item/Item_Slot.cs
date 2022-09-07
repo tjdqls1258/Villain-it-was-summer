@@ -23,6 +23,7 @@ public class Item_Slot : MonoBehaviour
     public Equipment_Type type;
     public bool Is_Skill_Ative = false;
     private Color color_a0;
+
     private void Awake()
     {
         color_a0 = new Color(1.0f, 1.0f, 1.0f, 0.0f);
@@ -59,6 +60,10 @@ public class Item_Slot : MonoBehaviour
 
     private void OnDisable()
     {
+        if(item == null)
+        {
+            return;
+        }
         item.Skill.Cancel_Skill();
         int count = 0;
         foreach (SpriteRenderer spriteRender in Items_Image)

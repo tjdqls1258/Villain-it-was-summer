@@ -4,20 +4,40 @@ using UnityEngine;
 
 public class SlotManager : MonoBehaviour
 {
+    private Player player_Unit;
+
     public Item_Slot[] Accessories_Slot;
 
     public Item_Slot Left_Weapon_Slot;
     public Item_Slot Right_Weapon_Slot;
-
     public Item_Slot Helmet_Slot;
     public Item_Slot Amror_Slot;
-    
+
     public bool Is_ToHand = false;
 
+    //추가 스텟 관리.
+    public int Add_Damage = 0;
+    public float Add_Hp = 0;
+    public float Add_Atk_Speed;
+    public float Add_Move_Speed;
+
     private uint CurrentAccessories = 0;
-    public void Equip_Item(Item_Data item, int SeletAccessories)
+
+    Collider2D Coll_Item;
+
+    public void Awake()
     {
-        switch(item.Item_Type)
+        player_Unit = GetComponentInParent<Player>();
+        Reset_State();
+        Add_ItemState_To_Player();
+    }
+
+    public void Equip_Item(Item_Data item)
+    {
+        Reset_State();//기존에 스텟을 리셋 시키고
+
+        //아이템을 교체후
+        switch (item.Item_Type)
         {
             case Equipment_Type.Amror:
                 Amror_Slot.Set_Item(item);
@@ -47,10 +67,86 @@ public class SlotManager : MonoBehaviour
                 }
                 else 
                 {
-                    Accessories_Slot[SeletAccessories].Set_Item(item);
+                    return;
                 }
                 break;
-        }
+        } 
 
+        Add_ItemState_To_Player(); //스텟을 추가시킨다.
+    }
+
+    public void Add_ItemState_To_Player()
+    {
+        foreach (Item_Slot AccessoriesItems in Accessories_Slot)
+        {
+            Add_State(AccessoriesItems.item);
+        }
+        Add_State(Left_Weapon_Slot.item);
+        Add_State(Right_Weapon_Slot.item);
+        Add_State(Helmet_Slot.item);
+        Add_State(Amror_Slot.item);
+        Set_Player_State(Add_Damage, Add_Hp, Add_Move_Speed, Add_Atk_Speed);
+    }
+
+    //반복을 줄이기 위한 함수.
+    private void Add_State(Item_Data item)
+    {
+        if(item == null)
+        {
+            return;
+        }
+        Add_Damage += item.Damage;
+        Add_Hp += item.Add_Hp;
+        Add_Atk_Speed += item.Atk_Speed;
+        Add_Move_Speed += item.Move_Speed;
+    }
+
+    //스텟 초기화
+    public void Reset_State()
+    {
+        Set_Player_State(-Add_Damage, -Add_Hp, -Add_Move_Speed, -Add_Atk_Speed);
+        Add_Damage = 0;
+        Add_Hp = 0;
+        Add_Atk_Speed = 0;
+        Add_Move_Speed = 0;
+    }
+
+    public void Set_Player_State(int AD, float Hp, float Speed, float ATKSpeed)
+    {
+        player_Unit.iAD += AD;
+        player_Unit.MaxHp += Hp;
+        player_Unit.fMove_Spd += Speed;
+        player_Unit.fAttack_Delay += ATKSpeed;
+    }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("GetItem"))
+        {
+            if(Coll_Item == null)
+            {
+                return;
+            }
+            Debug.Log("Get Item : " + Coll_Item.GetComponent<Item_Data>().Item_Type);
+            Equip_Item(Coll_Item.GetComponent<Item_Data>());
+            Destroy(Coll_Item.gameObject);
+            Coll_Item = null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Item"))
+        {
+            Coll_Item = collision;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Item") && Coll_Item == collision)
+        {
+            Coll_Item = null;
+        }
     }
 }
