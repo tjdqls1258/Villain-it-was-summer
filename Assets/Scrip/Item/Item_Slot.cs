@@ -27,12 +27,16 @@ public class Item_Slot : MonoBehaviour
     private void Awake()
     {
         color_a0 = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-        Set_Item(item);
     }
 
     public void Set_Item(Item_Data item_Data)
     {
         int count = 0;
+        if (item != null)
+        {
+            Destroy(item.gameObject);
+            item.Skill.Cancel_Skill();
+        }
         //아이템 데이터가 없는 경우 (EX 무기 양손 무기에서 한손무기로 변경시)
         //해당 함수 실행전에 해당 아이템을 드랍 추가 필요.
         if (item_Data == null)
@@ -49,6 +53,7 @@ public class Item_Slot : MonoBehaviour
         if (type == item_Data.Item_Type)
         {
             item = item_Data;
+            item_Data.transform.SetParent(this.transform);
             foreach (SpriteRenderer spriteRender in Items_Image)
             {
                 spriteRender.color = Color.white;

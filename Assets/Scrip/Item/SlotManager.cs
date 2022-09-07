@@ -51,11 +51,19 @@ public class SlotManager : MonoBehaviour
                 Left_Weapon_Slot.Set_Item(item);
                 if(Left_Weapon_Slot.item.Is_Twohand)
                 {
-                    Right_Weapon_Slot.enabled = false;
+                    Right_Weapon_Slot.Set_Item(null);
                 }
                 break;
 
             case Equipment_Type.Right_Weapon:
+                if (Left_Weapon_Slot.item != null)
+                {
+                    if (Left_Weapon_Slot.item.Is_Twohand)
+                    {
+                        break;
+                    }
+                }
+
                 Right_Weapon_Slot.Set_Item(item);
                 break;
 
@@ -129,7 +137,7 @@ public class SlotManager : MonoBehaviour
             }
             Debug.Log("Get Item : " + Coll_Item.GetComponent<Item_Data>().Item_Type);
             Equip_Item(Coll_Item.GetComponent<Item_Data>());
-            Destroy(Coll_Item.gameObject);
+            Coll_Item.gameObject.SetActive(false);
             Coll_Item = null;
         }
     }
