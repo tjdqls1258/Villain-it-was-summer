@@ -48,6 +48,8 @@ public class PlayUI : MonoBehaviour
         SettingPanel.SetActive(true);
         Time.timeScale = 0.0f;
         IsPause = true;
+        inventory.SetActive(false);
+        invenon = false;
     }
     public void Resume()
     {
