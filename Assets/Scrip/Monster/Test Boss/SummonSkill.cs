@@ -11,7 +11,7 @@ public class SummonSkill : Skill
     public Animation_Controller animation_Con;
 
     [SerializeField] List<GameObject> Pool = new List<GameObject>();
-
+    //단일 몬스터 소환 스킬. 오브젝트 폴링 사용.
     private void Awake()
     {
         for(int i= 0; i <= MaxSummon; i++)

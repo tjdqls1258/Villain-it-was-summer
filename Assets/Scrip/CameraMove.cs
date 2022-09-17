@@ -30,13 +30,13 @@ public class CameraMove : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Destroy(GameObject.Find("Main Camera"));
     }
-
+    //화면에 사이즈를 그려줌
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(Center, Size);
     }
-
+    //Center와 Size내에 플레이어를 따라다니는 카메라
     void LateUpdate()
     {
         //transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), Time.deltaTime * speed);

@@ -8,7 +8,6 @@ public class Hit : MonoBehaviour
     public float Hit_Invincible_Time = 0.5f;
     [SerializeField] private Color[] Hit_Color;
     [SerializeField] private GameObject Die_Effect;
-    [SerializeField] private GameObject Hit_Effect;
 
     public bool Is_Hit = false;
     public float Reset_Hit_Time = 0.5f;
@@ -39,10 +38,6 @@ public class Hit : MonoBehaviour
         }
 
         Is_Hit = false;
-        if (Hit_Effect != null)
-        {
-            Hit_Effect.SetActive(false);
-        }
         ATK_area.SetActive(true);
     }
 
@@ -73,7 +68,7 @@ public class Hit : MonoBehaviour
         Data.Change_State(Unit.State.DIE);
         StartCoroutine(Destroy_Self());
     }
-
+    //애니메이션 재생후 제거.
     IEnumerator Destroy_Self()
     {
         yield return new WaitForSeconds(animation_Con.CurrentAnimationLength());
@@ -94,7 +89,7 @@ public class Hit : MonoBehaviour
         }
         Debug.Log("아이템 드랍");
     }
-
+    //해당 객체가 공격 당했을 경우
     public void Player_Is_Hit(float Damage, Vector2 HitPower, Vector3 HitPos)
     {
         if (!Is_Hit)
@@ -102,14 +97,6 @@ public class Hit : MonoBehaviour
             animation_Con.Toggle_Hit();
             rigid.AddForce(HitPower * -3.0f, ForceMode2D.Impulse);
 
-            if (Hit_Effect != null)
-            { 
-                Hit_Effect.transform.position = (HitPos - transform.position).normalized;
-                float posX = (HitPos.x-transform.position.x) - (HitPower.x * 3.0f);
-
-                Hit_Effect.transform.position = transform.position + new Vector3(Hit_Effect.transform.position.x + posX, (HitPos - transform.position).y, 0);
-                Hit_Effect.SetActive(true);
-            }
             StartCoroutine(Reset_Hit());
             GetDamage(Damage);
             if (DamageText != null && DamageTextPos != null)
@@ -149,10 +136,6 @@ public class Hit : MonoBehaviour
             Hit_Color[count] = sprite[count].color;
             Hit_Color[count].a = 1.0f;
             sprite[count].color = Hit_Color[count];
-        }
-        if (Hit_Effect != null)
-        {
-            Hit_Effect.SetActive(false);
         }
         Is_Hit = false;
     }

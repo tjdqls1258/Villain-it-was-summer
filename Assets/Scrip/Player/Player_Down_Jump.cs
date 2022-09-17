@@ -11,7 +11,7 @@ public class Player_Down_Jump : MonoBehaviour
     {
         if (Is_Down_Jump && Parent.GetComponent<Rigidbody2D>().velocity.y == 0)
         {
-            Parent.gameObject.layer = 7;
+            Parent.gameObject.layer = 14;
             StartCoroutine(Return_Layer());
         }
     }

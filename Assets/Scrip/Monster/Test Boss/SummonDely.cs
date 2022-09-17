@@ -9,16 +9,11 @@ public class SummonDely : MonoBehaviour
     {
         Summon.SetActive(false);
         Summon.transform.localPosition = new Vector3(0, -0.3f, 0);
-        StartCoroutine(Summon_Ative());
-    }
-    private void Awake()
-    {
-        StartCoroutine(Summon_Ative());
     }
 
-    IEnumerator Summon_Ative()
+    public void Summon_Ative()
     {
-        yield return new WaitForSeconds(0.2f);
         Summon.SetActive(true);
+        Summon.transform.localPosition = new Vector3(0, -0.3f, 0);
     }
 }

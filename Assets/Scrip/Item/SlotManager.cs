@@ -75,6 +75,7 @@ public class SlotManager : MonoBehaviour
                 }
                 else 
                 {
+                    //장비를 버려야 착용 가능하게 해야함.
                     return;
                 }
                 break;
@@ -135,7 +136,7 @@ public class SlotManager : MonoBehaviour
             {
                 return;
             }
-            Debug.Log("Get Item : " + Coll_Item.GetComponent<Item_Data>().Item_Type);
+
             Equip_Item(Coll_Item.GetComponent<Item_Data>());
             Coll_Item.gameObject.SetActive(false);
             Coll_Item = null;

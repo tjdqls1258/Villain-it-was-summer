@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item_Data : MonoBehaviour
 {
     [Header("Item Information")]
-    public bool Is_Twohand;
+    public bool Is_Twohand; //양손으로 사용하는 무기인지 판별
     public int Damage;
     public float Add_Hp;
     public Equipment_Type Item_Type;

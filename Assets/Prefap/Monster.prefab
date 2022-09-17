@@ -220,7 +220,7 @@ MonoBehaviour:
   This_And_Player_Distance: {x: 0, y: 0, z: 0}
   See_Max_Distance: 7
   ATK_Distance: 2.3
-  Ray_Distance: 1.5
+  Ray_Distance: 2.3
   Player: {fileID: 0}
   monster: {fileID: 0}
   Skills: []
@@ -268,11 +268,7 @@ MonoBehaviour:
   MaxHp: 100
   fHP: 100
   fDash_Power: 5
-  iMP: 0
   iAD: 10
-  iAP: 10
-  iDEF: 5
-  iMDEF: 5
   skill_list:
   - {fileID: 5872331973478426473}
   - {fileID: 5872331973478426474}

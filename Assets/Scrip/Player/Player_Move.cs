@@ -20,6 +20,7 @@ public class Player_Move : MonoBehaviour
 
 private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         cam = GetComponent<Cam_Shacking>();
         rigid = GetComponent<Rigidbody2D>();
         move = (Move)player.Find_Skill_With_Tag("Move");

@@ -137,7 +137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5872331973478426480, guid: 374886426c87e4a4aa5ad9b63859555d, type: 3}
       propertyPath: ATK_Distance
-      value: 2
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872331973478426480, guid: 374886426c87e4a4aa5ad9b63859555d, type: 3}
+      propertyPath: Ray_Distance
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872331973478426480, guid: 374886426c87e4a4aa5ad9b63859555d, type: 3}
+      propertyPath: See_Max_Distance
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5872331973478426481, guid: 374886426c87e4a4aa5ad9b63859555d, type: 3}
       propertyPath: m_RootOrder
@@ -211,23 +219,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5872331973478426483, guid: 374886426c87e4a4aa5ad9b63859555d, type: 3}
   m_PrefabInstance: {fileID: 1034325648}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &120451512
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5872331973438941667}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3838420b2de99245828b1173bc5c6dd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

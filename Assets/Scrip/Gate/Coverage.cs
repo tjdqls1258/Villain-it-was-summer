@@ -5,7 +5,6 @@ using UnityEngine;
 public class Coverage : MonoBehaviour
 {
     public int Moeny = 100;
-    //public List<Item> Coverage_List = new List<Item>(); 
     private SpriteRenderer sprite;
 
     private void Awake()
@@ -38,6 +37,5 @@ public class Coverage : MonoBehaviour
     {
         GameObject player = GameObject.Find("Player");
         Moeny *= Level;
-        //player.GetCompoent("Inven").Get_Item(Coverage_List[0,Coverage_List.count]);
     }
 }

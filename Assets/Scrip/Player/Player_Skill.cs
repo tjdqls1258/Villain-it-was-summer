@@ -8,8 +8,10 @@ public class Player_Skill : MonoBehaviour
     public Transform ATK_area;
     public Image Ative_Skill;
     public Image Passive_Skill;
+
     private void Awake()
     {
+        //스킬 메니저를 찾아서 스킬을 등록함.
         GameObject skill_manager = GameObject.Find("Skill Manager");
         if (skill_manager == null)
         {

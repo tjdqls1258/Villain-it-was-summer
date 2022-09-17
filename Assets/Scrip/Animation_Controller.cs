@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Animation_Controller : MonoBehaviour
 {
+    //전반적인 애니메이션을 관리해주는 컴포넌트
     public Animator Animator_Con;
 
     private void Awake()
@@ -34,6 +35,11 @@ public class Animation_Controller : MonoBehaviour
     public void Toggle_Die()
     {
         Animator_Con.SetTrigger("Dead");
+    }
+
+    public void Play_TargetAnimation(string targetAnim)
+    {
+        Animator_Con.CrossFade(targetAnim, 0.2f);
     }
 
     public float CurrentAnimationLength()

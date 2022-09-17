@@ -10,7 +10,7 @@ public class Danger_Singe : MonoBehaviour
     public Player player;
     Color color = Color.red;
     public Color color_mid;
-    // Start is called before the first frame update
+
     void Awake()
     {
         post = CamParent.GetComponent<PostProcessVolume>();
@@ -19,7 +19,6 @@ public class Danger_Singe : MonoBehaviour
         color_mid.r = 1.0f;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (post.profile.GetSetting<Vignette>().color == color_mid) { color = Color.red; }

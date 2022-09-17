@@ -25,8 +25,8 @@ public class Skill_Inventory : MonoBehaviour
     [System.Serializable]
     class SkillList
     {
-        public List<Skill.Skill_Data> Ative_SkillList = new List<Skill.Skill_Data>();
-        public List<Skill.Skill_Data> Passive_SkillList = new List<Skill.Skill_Data>();
+        public List<Skill_Data> Ative_SkillList = new List<Skill_Data>();
+        public List<Skill_Data> Passive_SkillList = new List<Skill_Data>();
     }
 
     SkillList skillList = new SkillList();
@@ -91,7 +91,7 @@ public class Skill_Inventory : MonoBehaviour
         }
     }
 
-    public void Add_Skill(Skill.Skill_Data _skill)
+    public void Add_Skill(Skill_Data _skill)
     {
         if(_skill.skill_Type <= Skill_Type.Start || _skill.skill_Type >= Skill_Type.End)
         {

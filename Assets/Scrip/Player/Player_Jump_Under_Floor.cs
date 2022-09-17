@@ -9,7 +9,7 @@ public class Player_Jump_Under_Floor : MonoBehaviour
 
     public void ChangeLayer()
     {
-        Parent.gameObject.layer = 7;
+        Parent.gameObject.layer = 14;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
