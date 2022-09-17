@@ -12,11 +12,7 @@ public class Unit : MonoBehaviour
     public float MaxHp = 100;
     public float fHP = 100;
     public float fDash_Power = 5.0f;
-    public int iMP = 0;
     public int iAD = 10;
-    public int iAP = 10;
-    public int iDEF = 5;
-    public int iMDEF = 5;
 
     public List<Skill> skill_list;
 

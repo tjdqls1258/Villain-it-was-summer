@@ -35,7 +35,12 @@ public class Player_Skill : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            if(skill01 == null)
+            {
+                return;
+            }
             GetComponentInChildren<Animator>().SetTrigger("Skill");
+
             if (skill01.Skill_Effect_List != null)
             {
                 Instantiate(skill01.Skill_Effect_List, ATK_area.position, Quaternion.identity);
