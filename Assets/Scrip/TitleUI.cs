@@ -8,7 +8,7 @@ public class TitleUI : MonoBehaviour
     public void NewGame()
     {
         //처음부터 시작이므로 플레이 처음 씬으로
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(1);
     }
 
     public void LoadGame()
