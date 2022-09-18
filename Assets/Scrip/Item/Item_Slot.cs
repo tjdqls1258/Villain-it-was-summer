@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public enum Equipment_Type
 {
     Start_Enum = -1,
-    Helmet,
+    Shoes,
     Left_Weapon,
     Right_Weapon,
     TwoHand_Weapon,
@@ -19,12 +19,18 @@ public enum Equipment_Type
 //아이템을 착용할 슬롯 클래스
 public class Item_Slot : MonoBehaviour
 {
+    public Image Euqiment_image;
     //아이템 데이터(아이템의 스킬, 타입, 스텟 등)
     public Item_Data item;
     //아이템을 착용했을때 해당 아이템으로 교체해줄 SpriteRenderer
     public SpriteRenderer[] Items_Image;
     public Equipment_Type type;
     public bool Is_Skill_Ative = false;
+
+    private void Awake()
+    {
+        Set_Item(item);
+    }
 
     public void Set_Item(Item_Data item_Data)
     {
@@ -41,6 +47,8 @@ public class Item_Slot : MonoBehaviour
             for (int i = 0; i < Items_Image.Length; i++)
             {
                 Items_Image[i].enabled = false;
+                Euqiment_image.sprite = null;
+                Euqiment_image.enabled = false;
             }
             return;
         }
@@ -56,6 +64,8 @@ public class Item_Slot : MonoBehaviour
                 Items_Image[i].enabled = true;
                 Items_Image[i].sprite = item_Data.Item_Image[i];
             }
+            Euqiment_image.sprite = item_Data.Item_Image[0];
+            Euqiment_image.enabled = true;
         }
     }
 

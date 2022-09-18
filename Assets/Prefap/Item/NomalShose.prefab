@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6300230717211874415}
   - component: {fileID: 6809557791335765623}
   m_Layer: 12
-  m_Name: NomalHelmet
+  m_Name: NomalShose
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a79f145e10eea4e999334e278812b365, type: 3}
+  m_Sprite: {fileID: 8616813021583795274, guid: 4f4d6264408da453a8511876ebec8ae3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.375, y: 0.28125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,12 +102,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Is_Twohand: 1
   Damage: 0
-  Add_Hp: 0
   Item_Type: 0
+  Add_Hp: 0
   Atk_Speed: 0
   Move_Speed: 0
+  Explanation_Item: "\uC774\uAC83\uC740 \uC2E0\uBC1C\uC785\uB2C8\uB2E4. X\uBC1C \uC544\uB2C8\uACE0
+    \uC2E0\uBC1C\uC785\uB2C8\uB2E4."
   Item_Image:
-  - {fileID: 21300000, guid: a79f145e10eea4e999334e278812b365, type: 3}
+  - {fileID: -62334307996113135, guid: a4b630b105c514614b9ba9d9937fef5d, type: 3}
+  - {fileID: -5346438201911016785, guid: a4b630b105c514614b9ba9d9937fef5d, type: 3}
   Skill: {fileID: 9128415319551827800}
 --- !u!114 &9128415319551827800
 MonoBehaviour:
@@ -144,9 +147,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.484375, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.125, y: 0.21875}
+    newSize: {x: 0.375, y: 0.28125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

@@ -102,10 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Is_Twohand: 0
   Damage: 10
-  Add_Hp: 20
   Item_Type: 4
+  Add_Hp: 20
   Atk_Speed: 0
   Move_Speed: 0
+  Explanation_Item: "\uAC00\uC544\uC544\uC544\uC555\uC637"
   Item_Image:
   - {fileID: -6505695957970812123, guid: 586c2a08ac707394793246dc422f8ede, type: 3}
   - {fileID: 3257737980328237110, guid: 586c2a08ac707394793246dc422f8ede, type: 3}

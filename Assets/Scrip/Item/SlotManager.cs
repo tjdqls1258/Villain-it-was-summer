@@ -10,7 +10,7 @@ public class SlotManager : MonoBehaviour
 
     public Item_Slot Left_Weapon_Slot;
     public Item_Slot Right_Weapon_Slot;
-    public Item_Slot Helmet_Slot;
+    public Item_Slot Shoes_Slot;
     public Item_Slot Amror_Slot;
 
     public bool Is_ToHand = false;
@@ -43,8 +43,8 @@ public class SlotManager : MonoBehaviour
                 Amror_Slot.Set_Item(item);
                 break;
 
-            case Equipment_Type.Helmet:
-                Helmet_Slot.Set_Item(item);
+            case Equipment_Type.Shoes:
+                Shoes_Slot.Set_Item(item);
                 break;
 
             case Equipment_Type.Left_Weapon:
@@ -92,7 +92,7 @@ public class SlotManager : MonoBehaviour
         }
         Add_State(Left_Weapon_Slot.item);
         Add_State(Right_Weapon_Slot.item);
-        Add_State(Helmet_Slot.item);
+        Add_State(Shoes_Slot.item);
         Add_State(Amror_Slot.item);
         Set_Player_State(Add_Damage, Add_Hp, Add_Move_Speed, Add_Atk_Speed);
     }
