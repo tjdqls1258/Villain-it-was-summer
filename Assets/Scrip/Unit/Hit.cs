@@ -115,6 +115,12 @@ public class Hit : MonoBehaviour
         {
             for (int count = 0; count < sprite.Length; count++)
             {
+                if(sprite[count] ==null)
+                {
+                    count++;
+                    continue;
+                }
+
                 if (sprite[count].color.a == 1.0f)
                 {
                     Hit_Color[count] = sprite[count].color;
@@ -133,6 +139,11 @@ public class Hit : MonoBehaviour
         }
         for (int count = 0; count < sprite.Length; count++)
         {
+            if (sprite[count] == null)
+            {
+                count++;
+                continue;
+            }
             Hit_Color[count] = sprite[count].color;
             Hit_Color[count].a = 1.0f;
             sprite[count].color = Hit_Color[count];
