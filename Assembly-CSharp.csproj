@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\MinAttribute.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scrip\Player\Player_Skill.cs" />
     <Compile Include="Assets\Scrip\Unit\Nomal_ATK.cs" />
     <Compile Include="Assets\Scrip\Monster\Spawn_Cam_Setting.cs" />
+    <Compile Include="Assets\Scrip\PlayUI.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Prefabs.cs" />
     <Compile Include="Assets\Image\SPUM\Script\SPUM_Manager.cs" />
     <Compile Include="Assets\Scrip\DataSaver\CSVReader.cs" />
@@ -132,12 +133,14 @@
     <Compile Include="Assets\Image\SPUM\Script\SPUM_PreviewItem.cs" />
     <Compile Include="Assets\Image\SPUM\Script\Plugin\Moments Recorder\Scripts\Gif\LzwEncoder.cs" />
     <Compile Include="Assets\Effect\FX\Prefabs\Destory_Self.cs" />
+    <Compile Include="Assets\Scrip\Euqipment_Manager.cs" />
     <Compile Include="Assets\Scrip\Player\Inventory\Skill_Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Bringer Of Death\License.txt" />
+    <None Include="Assets\Monsters Creatures Fantasy\Bringer Of Death\License.txt" />
+    <None Include="Assets\FreePixelMob\ReadMe.txt" />
     <None Include="Assets\Image\SPUM\ReadMe - 1.6.0.txt" />
-    <None Include="Assets\Bringer Of Death\Contact.txt" />
+    <None Include="Assets\Monsters Creatures Fantasy\Bringer Of Death\Contact.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
