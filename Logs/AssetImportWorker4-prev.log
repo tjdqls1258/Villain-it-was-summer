@@ -1,0 +1,584 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.1f1 (3b70a0754835) revision 3895456'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'ko' Physical Memory: 16322 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/user/Documents/GitHub/Villain-it-was-summer
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+57106
+Successfully changed project path to: C:/Users/user/Documents/GitHub/Villain-it-was-summer
+C:/Users/user/Documents/GitHub/Villain-it-was-summer
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 134.71 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.1f1 (3b70a0754835)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/Villain-it-was-summer/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.040124 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 111.64 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.060 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1061ms)
+		BeginReloadAssembly (207ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (633ms)
+			LoadAssemblies (200ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (136ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (361ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (112ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (160ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.020930 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\user\Documents\GitHub\Villain-it-was-summer\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\user\Documents\GitHub\Villain-it-was-summer\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 110.13 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.828 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1829ms)
+		BeginReloadAssembly (244ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1387ms)
+			LoadAssemblies (247ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (740ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (187ms)
+				ProcessInitializeOnLoadAttributes (343ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
+				AfterProcessingInitializeOnLoad (43ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4090 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 62 unused Assets / (1.8 MB). Loaded Objects now: 4540.
+Memory consumption went from 228.0 MB to 226.2 MB.
+Total: 3.966300 ms (FindLiveObjects: 0.385300 ms CreateObjectMapping: 0.343100 ms MarkObjects: 2.716000 ms  DeleteObjects: 0.520700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10064.431085 seconds.
+  path: Assets/Image/SPUM/Res/UI/img_colormap.gif
+  artifactKey: Guid(6822c51151c0b4a038b02525b40c06e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/Res/UI/img_colormap.gif using Guid(6822c51151c0b4a038b02525b40c06e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a828383ff06d1c9e5dc476244c97bcae') in 0.170319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.640177 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Background/LayerBackground.png
+  artifactKey: Guid(4d1badce2b0c57943a26b2bdb962806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Background/LayerBackground.png using Guid(4d1badce2b0c57943a26b2bdb962806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcaa328b054775a06f4f72f52cd9018f') in 0.044750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.036093 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_08.png
+  artifactKey: Guid(2367f636a80334d659849604908ab07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_08.png using Guid(2367f636a80334d659849604908ab07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '358ad09cfe24337a866c842c674e8467') in 0.022697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.876970 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_10.png
+  artifactKey: Guid(39b5df11e0c48498c8743958d95396b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_10.png using Guid(39b5df11e0c48498c8743958d95396b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b111c5800249d748c05b168fdab40f') in 0.031250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.039132 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Items/3_Pant/Foot_1.png
+  artifactKey: Guid(4f4d6264408da453a8511876ebec8ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Items/3_Pant/Foot_1.png using Guid(4f4d6264408da453a8511876ebec8ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7585e9962f51d3f27be9c2da14fe3602') in 0.024283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.458754 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_12.png
+  artifactKey: Guid(f71ba98f5e5894a9e9a109dc34922832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_12.png using Guid(f71ba98f5e5894a9e9a109dc34922832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d0aaedc16f805a49cd4912b28d5b098') in 0.036048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Items/3_Pant/Foot_1.png
+  artifactKey: Guid(479c8b868d2ebed469fe82fd83a071e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Items/3_Pant/Foot_1.png using Guid(479c8b868d2ebed469fe82fd83a071e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ed70469de9d8aab84e01b33274d22ff') in 0.029444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.416072 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_04.png
+  artifactKey: Guid(9f70f3b311741431cbbda23a4cfbc285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_04.png using Guid(9f70f3b311741431cbbda23a4cfbc285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526d684d6ded11b34da7595c8cdbc055') in 0.026080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.335838 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_01.png
+  artifactKey: Guid(e48545c85cd9aba4eb426b071f48b8a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_01.png using Guid(e48545c85cd9aba4eb426b071f48b8a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3758e2d53cf85d559a80d4c7deb18bd4') in 0.028696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.046612 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_05.png
+  artifactKey: Guid(e7d2d469a9a9548bcb468fc5ff5792c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_05.png using Guid(e7d2d469a9a9548bcb468fc5ff5792c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5fbe98f7afb3587cbc8550e5607e39') in 0.023976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.050726 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_08.png
+  artifactKey: Guid(89af70d16aa65144a8f1e91cb688ddfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_08.png using Guid(89af70d16aa65144a8f1e91cb688ddfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d3710a785857624e4f094eddfcce16') in 0.019697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.189276 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_07.png
+  artifactKey: Guid(97d26d6cbd03c404dad6d33c2776714e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_07.png using Guid(97d26d6cbd03c404dad6d33c2776714e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ececfc9ff328c02a03704e42767fea76') in 0.024377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029866 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_05.png
+  artifactKey: Guid(78cd28e986ebb784c903ff5c1d3d8591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/3_Pant/New_Pant_05.png using Guid(78cd28e986ebb784c903ff5c1d3d8591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '111f529e4cb3e33f568d210e1f466edb') in 0.027691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.040555 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/7_Back/New_Back_01.png
+  artifactKey: Guid(3dabd4000939efd4097d92bc603ca328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/7_Back/New_Back_01.png using Guid(3dabd4000939efd4097d92bc603ca328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7751dd57b7aa0200d974a4d66d633c30') in 0.020537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_01.png
+  artifactKey: Guid(4752f6224423a3242a2744b0f32c6443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_01.png using Guid(4752f6224423a3242a2744b0f32c6443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecbbae2e20a4f3dbb19a41bff9685205') in 0.024448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_02.png
+  artifactKey: Guid(a221d28f8581d4b5eb0e20fee81c5cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_02.png using Guid(a221d28f8581d4b5eb0e20fee81c5cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef24803cddd991175c0868ec67401d7b') in 0.022823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016206 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_03.png
+  artifactKey: Guid(1222fe6c579bc8645ae508785375a763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_03.png using Guid(1222fe6c579bc8645ae508785375a763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd94cfe2e4066ca630044cd12650cb7') in 0.042576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.062566 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_06.png
+  artifactKey: Guid(b6063378e26704067a2587f07d800ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_06.png using Guid(b6063378e26704067a2587f07d800ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da801e2e17cee9f56b5c63d06478bebe') in 0.027588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.049533 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_12.png
+  artifactKey: Guid(9641b182813c11c48820a4c5559a4931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_12.png using Guid(9641b182813c11c48820a4c5559a4931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a9a45a4dc355adb4d34d2f3b1407d1f') in 0.027192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_13.png
+  artifactKey: Guid(8f7d39a97d8bd1d4b818314bbbcabb98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_13.png using Guid(8f7d39a97d8bd1d4b818314bbbcabb98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b3f89024780a45735f02215287941f') in 0.025979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.019039 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_17.png
+  artifactKey: Guid(4fe4c4970f50de6488a1dfa110059581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_17.png using Guid(4fe4c4970f50de6488a1dfa110059581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965e4a58b9a974ce428c937bd797d39f') in 0.022536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_19.png
+  artifactKey: Guid(0cd36d851007e1645bd90e48f68d68ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/0_Hair/New_Hair_19.png using Guid(0cd36d851007e1645bd90e48f68d68ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23414dd1c3ac49394ff600cb187052b') in 0.023485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.513024 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_02.png
+  artifactKey: Guid(a79f145e10eea4e999334e278812b365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_02.png using Guid(a79f145e10eea4e999334e278812b365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b0e19960a9b11570e1302dcf5157af') in 0.023626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_05.png
+  artifactKey: Guid(73cbe7b5b9e4dbb4e8aebe165177d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_05.png using Guid(73cbe7b5b9e4dbb4e8aebe165177d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c8222697415e1dfb7cc364d908dcea') in 0.027329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_08.png
+  artifactKey: Guid(9a86ce2668d87f64b98593dc91b4ba60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_08.png using Guid(9a86ce2668d87f64b98593dc91b4ba60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa789f897c7ef9341a226ce3d66bbc1f') in 0.023569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.116558 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_08.png
+  artifactKey: Guid(9bad6bc83651a47fd87cadff0d08bdc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_08.png using Guid(9bad6bc83651a47fd87cadff0d08bdc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64ef309205ec79bc8912b16868b231f') in 0.017537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_10.png
+  artifactKey: Guid(6706b1babb0f50745907bbab972ff61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/4_Helmet/New_Helmet_10.png using Guid(6706b1babb0f50745907bbab972ff61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8bf58a1ea431c8e39f471dd115f1ab1') in 0.030008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Shield_01.png
+  artifactKey: Guid(324916aebf88d0c4097d60326cce9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Shield_01.png using Guid(324916aebf88d0c4097d60326cce9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3205166a9d35695a3c3f1934c377bcc') in 0.016719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014529 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Shield_03.png
+  artifactKey: Guid(ed7d8f9ea9143114087e471268361081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Shield_03.png using Guid(ed7d8f9ea9143114087e471268361081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c39c278e56f662187ca951a2627ebc7b') in 0.027745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_01.png
+  artifactKey: Guid(920510d3994f1469f8f88fd76b9f7277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_01.png using Guid(920510d3994f1469f8f88fd76b9f7277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3168889260f2dc807269f2365d6b0f6a') in 0.025226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.269284 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_weapon_02.png
+  artifactKey: Guid(865a7131292ca4737a2713362d123c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_weapon_02.png using Guid(865a7131292ca4737a2713362d123c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b839b2ab2e11aa900997b26df05a9bf6') in 0.040532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_04.png
+  artifactKey: Guid(75e7fbfa76dfac1408598738cfe9eda6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_04.png using Guid(75e7fbfa76dfac1408598738cfe9eda6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52bc75c5de5c1073917034f47f2daee2') in 0.026616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016344 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_05.png
+  artifactKey: Guid(dd6402512f85d4ca2a6e3b4944b5e6b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_05.png using Guid(dd6402512f85d4ca2a6e3b4944b5e6b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34800f1b65892b841427678e538d7c2') in 0.046786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_09.png
+  artifactKey: Guid(b1bacb41b8503464997c4811e5378598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_09.png using Guid(b1bacb41b8503464997c4811e5378598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eaba146e0cce7adda9df452b9899a87') in 0.047285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_10.png
+  artifactKey: Guid(b703d7727b08947219074023baf91225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_10.png using Guid(b703d7727b08947219074023baf91225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '879e7d2ded67742eaae24609b3e3611c') in 0.021382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.325963 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_11.png
+  artifactKey: Guid(99477209ff4c42647b8415904c4dbd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_11.png using Guid(99477209ff4c42647b8415904c4dbd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef561e8482ba239a3eb42bb43ad6cd34') in 0.022922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_14.png
+  artifactKey: Guid(79480702a310fed41b3db136e9db9458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_14.png using Guid(79480702a310fed41b3db136e9db9458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d95f4b203dab175644911dd05e685d1') in 0.023885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_13.png
+  artifactKey: Guid(c51c06c270683d24083f2160b4fbdf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_13.png using Guid(c51c06c270683d24083f2160b4fbdf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac2c17765b1848f96b98662acb155491') in 0.026642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair1.png
+  artifactKey: Guid(769280a9797e20043bbe564705c672af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair1.png using Guid(769280a9797e20043bbe564705c672af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a033849109dfa50abdf01978a8a85096') in 0.026269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_17.png
+  artifactKey: Guid(69a11d8cb1f7e46718b2f15d0878ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_17.png using Guid(69a11d8cb1f7e46718b2f15d0878ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77cd6c44a12f4cd1837be2ccfd3d65df') in 0.023531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_18.png
+  artifactKey: Guid(1a398be5f2b717b4e98fa7fb094ad955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver300/6_Weapons/New_Weapon_18.png using Guid(1a398be5f2b717b4e98fa7fb094ad955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4975eafd27598b3c405a46e2648c0c8') in 0.027872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair2.png
+  artifactKey: Guid(4fd33a6638beeed4ca29d781afc6fb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair2.png using Guid(4fd33a6638beeed4ca29d781afc6fb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97bdadbf97d68f86f3b25fa282d0c28d') in 0.019102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.082122 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair4.png
+  artifactKey: Guid(7013cb6b044af644ca3fbe63a46345fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair4.png using Guid(7013cb6b044af644ca3fbe63a46345fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb08375d6d6574cbdd1624c85f28dd1f') in 0.024720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair6.png
+  artifactKey: Guid(491cb7b79a820ef4e8caf22062770893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair6.png using Guid(491cb7b79a820ef4e8caf22062770893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8bac620fab347599c521cc965f00db7') in 0.018759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.384609 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair7.png
+  artifactKey: Guid(1f55bdebee823e74188980f99bedd071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair7.png using Guid(1f55bdebee823e74188980f99bedd071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2367eca5e2ea8eb430a5dc6e660ffb') in 0.032197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/4_Helmet/Normal_Helmet3.png
+  artifactKey: Guid(a6df9a6c78f39b74e98c66eb37211ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/4_Helmet/Normal_Helmet3.png using Guid(a6df9a6c78f39b74e98c66eb37211ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1396c72f43c76c964c74b469275bdda') in 0.029706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree3.png
+  artifactKey: Guid(162c38e0f8fa15149a8a640fd7733db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree3.png using Guid(162c38e0f8fa15149a8a640fd7733db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd47afef39f240ee82de171d180ad6fe') in 0.030894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree1.png
+  artifactKey: Guid(7b7239fb5625c1a4baab50c3fbc7d588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree1.png using Guid(7b7239fb5625c1a4baab50c3fbc7d588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6005252be2dbee18baca7c8c7745ad2b') in 0.028292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree6.png
+  artifactKey: Guid(2279d2aae995bb840af87e48f032392c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Trees/PixelTree6.png using Guid(2279d2aae995bb840af87e48f032392c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f0500ed380500775e689331ae9e4798') in 0.026087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair13.png
+  artifactKey: Guid(050680dd0362dd14f9a89844ca20b644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair13.png using Guid(050680dd0362dd14f9a89844ca20b644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d48a6eee84e4927ae56a2c110bd9e24') in 0.025570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair10.png
+  artifactKey: Guid(608e07a78757e6741bde4c9cacd0611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/0_Hair/Normal_Hair10.png using Guid(608e07a78757e6741bde4c9cacd0611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc1bcb7c392b9bb1120404e89522975') in 0.026058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.204146 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Objects/Rock_1.png
+  artifactKey: Guid(97d978de4a721e8449161a6acdc9aeb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Objects/Rock_1.png using Guid(97d978de4a721e8449161a6acdc9aeb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da205bd279680241988df80360470ff') in 0.015485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.099244 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Objects/Rock_2.png
+  artifactKey: Guid(c989b00b2e5456742b38c20deb221c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Objects/Rock_2.png using Guid(c989b00b2e5456742b38c20deb221c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6971bb1d0f87f4775243d90827833ca1') in 0.026481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Monsters Creatures Fantasy/Sprites/Goblin/Run.png
+  artifactKey: Guid(048dae4a3e3ffa741b83654644b60a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters Creatures Fantasy/Sprites/Goblin/Run.png using Guid(048dae4a3e3ffa741b83654644b60a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e23b1db7733e3a6678b35c2bccdad6') in 0.063442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.158782 seconds.
+  path: Assets/Image/SPUM/Res/Ect/Shadow.png
+  artifactKey: Guid(acb3bfd86ae6c41b084245f578292734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/Res/Ect/Shadow.png using Guid(acb3bfd86ae6c41b084245f578292734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '026be37c6913a6ee2b6c9e1e0275e491') in 0.021487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032924 seconds.
+  path: Assets/Monsters Creatures Fantasy/Sprites/Skeleton/Shield.png
+  artifactKey: Guid(f296174d37bb31841bccf9b56d811f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters Creatures Fantasy/Sprites/Skeleton/Shield.png using Guid(f296174d37bb31841bccf9b56d811f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea41cbcb5168104465b34d7b1098d04f') in 0.049392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450418 seconds.
+  path: Assets/FreePixelMob/SlimeA.png
+  artifactKey: Guid(9d69ae98725365b4b94189120dc1b40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreePixelMob/SlimeA.png using Guid(9d69ae98725365b4b94189120dc1b40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b27778aff753f1a1d14cb199b9106db7') in 0.069156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.560301 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Items/7_Back/Soon_Back1.png
+  artifactKey: Guid(69c44cddf3bf57140a6510cb526f6891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Items/7_Back/Soon_Back1.png using Guid(69c44cddf3bf57140a6510cb526f6891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c4816af8ae0a8adca7dedd01878133c') in 0.018728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.210342 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Soon_Spear.png
+  artifactKey: Guid(8d2e32343359643008ec8b92017bbf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Soon_Spear.png using Guid(8d2e32343359643008ec8b92017bbf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb450b3b35d187162e7ef0d42b754930') in 0.066953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.361146 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Items/6_Weapons/Spear_1.png
+  artifactKey: Guid(e6299d3e2954e9f4a894abb4ed1941f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Items/6_Weapons/Spear_1.png using Guid(e6299d3e2954e9f4a894abb4ed1941f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b0ccc46591469b5126db6aa3c81948') in 0.022250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.262144 seconds.
+  path: Assets/Image/SPUM/Res/UI/Square.png
+  artifactKey: Guid(b325a13e94f3bac4199e75b91fa98449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/Res/UI/Square.png using Guid(b325a13e94f3bac4199e75b91fa98449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dee78748414580f7191973c925967f2') in 0.022918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Lights/SunRayFull.png
+  artifactKey: Guid(90511d1f8ea18d74bb9f45d5e5064c4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Lights/SunRayFull.png using Guid(90511d1f8ea18d74bb9f45d5e5064c4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72eee1c6524f5a19815e4334a09d4330') in 0.033896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.056832 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_1.png
+  artifactKey: Guid(df96032537d4c482e9b20c674c73dc45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_1.png using Guid(df96032537d4c482e9b20c674c73dc45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cad4c5a8c47f401e4a3cbd65b2a13ab') in 0.022407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_3.png
+  artifactKey: Guid(6d883a2fc76fd4137ad47f5150294d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_3.png using Guid(6d883a2fc76fd4137ad47f5150294d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca51af88435651784ca8cffeae10aca') in 0.025275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.078858 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_4.png
+  artifactKey: Guid(f9cdd1844b02d4c81989b265d121a78a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Items/6_Weapons/Sword_4.png using Guid(f9cdd1844b02d4c81989b265d121a78a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c41a43c862fc376d063611e52faf02cb') in 0.021842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.031732 seconds.
+  path: Assets/Monsters Creatures Fantasy/Sprites/Flying eye/Take Hit.png
+  artifactKey: Guid(244d2b7af82202d4daae9b898fd596d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters Creatures Fantasy/Sprites/Flying eye/Take Hit.png using Guid(244d2b7af82202d4daae9b898fd596d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9d5dede1cecc7d0df56cba4b3b3907a') in 0.040647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.646252 seconds.
+  path: Assets/Image/BackGround/Pixel Tiles pack/Examples/Tiles.png
+  artifactKey: Guid(26aa642083399b842b0ff8becf710c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/BackGround/Pixel Tiles pack/Examples/Tiles.png using Guid(26aa642083399b842b0ff8becf710c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9df7eb662eb525fc18fbced8441a4e10') in 0.034956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.148091 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Items/6_Weapons/Ward_1.png
+  artifactKey: Guid(9521c6710a20a5042b2ed3a5516ea31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Items/6_Weapons/Ward_1.png using Guid(9521c6710a20a5042b2ed3a5516ea31f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321bc4578036da3f4bab9490ab6dd5c3') in 0.023817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/6_Weapons/WoodShield2.png
+  artifactKey: Guid(52b16d69cfb030a40a5af953069ec04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/SPUM/SPUM_Sprites/Packages/Ver121/6_Weapons/WoodShield2.png using Guid(52b16d69cfb030a40a5af953069ec04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00916e1d4e009a85ebcaf3ebbc4d19c6') in 0.021428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.017782 seconds.
+  path: Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/6_Weapons/WoodShield3.png
+  artifactKey: Guid(7ac296aa739462b4a874bf49cb637f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/SPUM/SPUM_Sprites/Packages/Ver121/6_Weapons/WoodShield3.png using Guid(7ac296aa739462b4a874bf49cb637f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad62b810c0560711a918f99dbcf69c88') in 0.035356 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
