@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Stage_Clear : MonoBehaviour
 {
+    public int next;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.transform.tag == "Player" )
@@ -12,7 +13,7 @@ public class Stage_Clear : MonoBehaviour
             if(Input.GetKey(KeyCode.C))
             {
                 Debug.Log("다음 스테이지로");
-                NextStage(SceneManager.GetActiveScene().buildIndex);
+                NextStage(next);
             }
         }
     }

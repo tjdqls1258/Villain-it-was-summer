@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6332932167269336041}
   - component: {fileID: 421943110553738437}
   m_Layer: 8
-  m_Name: TextPos
+  m_Name: DamageTextPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
