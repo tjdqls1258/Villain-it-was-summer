@@ -12,7 +12,7 @@ public class Monster_AI : MonoBehaviour
     [SerializeField] private float ATK_Distance = 2.3f;
     public float Ray_Distance = 1.0f;
 
-    [Header("")]
+    [Header("\n")]
     [SerializeField]
     private GameObject Player;
     public Monster monster;

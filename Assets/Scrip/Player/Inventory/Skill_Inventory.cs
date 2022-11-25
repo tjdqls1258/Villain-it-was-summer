@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System.IO;
 using System;
 using System.Reflection;
+using Unity.VisualScripting;
 
 public class Skill_Inventory : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class Skill_Inventory : MonoBehaviour
 
     SkillList skillList = new SkillList();
 
-    public void Awake()
+    public void Start()
     {
         if(Instance != null)
         {
@@ -57,19 +58,25 @@ public class Skill_Inventory : MonoBehaviour
             for (int i = 0; i < skillList.Ative_SkillList.Count; i++)
             {
                 GameObject selet_buten = Instantiate(Skill_Selet_Butten);
-
+                
                 Type Compoent_Type = assembly.GetType(skillList.Ative_SkillList[i].SkillName);
                 if(Compoent_Type == null)
                 {
                     Debug.LogError("없는 스킬 이름");
                     return;
                 }
-                selet_buten.AddComponent(Compoent_Type);
-                selet_buten.GetComponent<Skill>().skill_data = skillList.Ative_SkillList[i];
+                selet_buten.AddComponent(Compoent_Type).GetComponent<Skill>();
+
+                selet_buten.GetComponent<Skill>().skillScriptable = 
+                    Resources.Load("Skill/" + skillList.Ative_SkillList[i].SkillName + "_Data").GetComponent<Skill>().skillScriptable;
+
+                selet_buten.GetComponentInChildren<Skill>().skill_data = skillList.Ative_SkillList[i];
+
                 selet_buten.GetComponent<Button>().onClick.AddListener(() =>
-                Set_AtiveSkill(selet_buten.GetComponent<Skill>()));
-                selet_buten.GetComponentInChildren<Image>().sprite = selet_buten.GetComponent<Skill>().Skill_Icon;
-                selet_buten.transform.parent = Ative_ContentObject.transform;
+                Set_AtiveSkill(selet_buten.GetComponentInChildren<Skill>()));
+
+                selet_buten.GetComponentInChildren<Image>().sprite = selet_buten.GetComponent<Skill>().skillScriptable.Skill_Icon;
+                selet_buten.transform.SetParent(Ative_ContentObject.transform);
             }
             for (int i = 0; i < skillList.Passive_SkillList.Count; i++)
             {
@@ -81,12 +88,18 @@ public class Skill_Inventory : MonoBehaviour
                     Debug.LogError("없는 스킬 이름");
                     return;
                 }
-                selet_buten.AddComponent(Compoent_Type);
-                selet_buten.GetComponent<Skill>().skill_data = skillList.Passive_SkillList[i];
+                selet_buten.AddComponent(Compoent_Type).GetComponent<Skill>();
+
+                selet_buten.GetComponent<Skill>().skillScriptable =
+                    Resources.Load("Skill/" + skillList.Passive_SkillList[i].SkillName + "_Data").GetComponent<Skill>().skillScriptable;
+
+                selet_buten.GetComponentInChildren<Skill>().skill_data = skillList.Passive_SkillList[i];
+
                 selet_buten.GetComponent<Button>().onClick.AddListener(() =>
-                Set_PassiveSkill(selet_buten.GetComponent<Skill>()));
-                selet_buten.GetComponentInChildren<Image>().sprite = selet_buten.GetComponent<Skill>().Skill_Icon;
-                selet_buten.transform.parent = Passive_ContenObject.transform;
+                Set_PassiveSkill(selet_buten.GetComponentInChildren<Skill>()));
+
+                selet_buten.GetComponentInChildren<Image>().sprite = selet_buten.GetComponent<Skill>().skillScriptable.Skill_Icon;
+                selet_buten.transform.SetParent(Passive_ContenObject.transform);
             }
         }
     }
@@ -123,7 +136,7 @@ public class Skill_Inventory : MonoBehaviour
         {
             Selet_Ative.transform.parent = Ative_ContentObject.transform;
         }
-        SelectedAtiveImage.sprite = skill.Skill_Icon;
+        SelectedAtiveImage.sprite = skill.skillScriptable.Skill_Icon;
         Selet_Ative = skill;
     }
     public void Set_PassiveSkill(Skill skill)
@@ -132,7 +145,7 @@ public class Skill_Inventory : MonoBehaviour
         {
             Selet_Passive.transform.parent = Passive_ContenObject.transform;
         }
-        SelectedPassiveImage.sprite = skill.Skill_Icon;
+        SelectedPassiveImage.sprite = skill.skillScriptable.Skill_Icon;
         Selet_Passive = skill;
     }
 
@@ -140,11 +153,13 @@ public class Skill_Inventory : MonoBehaviour
     {
         if (Selet_Ative != null)
         {
-            Selet_Ative.transform.parent = gameObject.transform;
+            Selet_Ative.transform.SetParent(gameObject.transform);
+            //Selet_Ative.GetComponent<Skill>().SeleteSkill();
         }
         if (Selet_Passive != null)
         {
             Selet_Passive.transform.parent = gameObject.transform;
+            //Selet_Passive.GetComponent<Skill>().SeleteSkill();
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

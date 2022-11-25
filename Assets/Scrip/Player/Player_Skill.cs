@@ -24,13 +24,13 @@ public class Player_Skill : MonoBehaviour
         {
             skill01.transform.GetComponent<Button>().enabled = false;
             skill01.transform.GetComponent<Image>().enabled = false;
-            Ative_Skill.sprite = skill01.Skill_Icon;
+            Ative_Skill.sprite = skill01.skillScriptable.Skill_Icon;
         }
         if (skill02 != null)
         {
             skill02.transform.GetComponent<Button>().enabled = false;
             skill02.transform.GetComponent<Image>().enabled = false;
-            Passive_Skill.sprite = skill02.Skill_Icon;
+            Passive_Skill.sprite = skill02.skillScriptable.Skill_Icon;
         }
     }
     private void Update()
@@ -43,9 +43,9 @@ public class Player_Skill : MonoBehaviour
             }
             GetComponentInChildren<Animator>().SetTrigger("Skill");
 
-            if (skill01.Skill_Effect_List != null)
+            if (skill01.skillScriptable.Skill_Effect_List != null)
             {
-                Instantiate(skill01.Skill_Effect_List, ATK_area.position, Quaternion.identity);
+                Instantiate(skill01.skillScriptable.Skill_Effect_List[0], ATK_area.position, Quaternion.identity);
             }
             skill01.Skill_Ative();
         }

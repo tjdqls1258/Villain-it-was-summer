@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1136841195393052579}
   - component: {fileID: 1136841195393052589}
   - component: {fileID: 1136841195393052588}
+  - component: {fileID: 1760348087814973747}
+  - component: {fileID: 7880032569450723839}
   m_Layer: 0
   m_Name: Sprite And Animation
   m_TagString: Untagged
@@ -29,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -0.3, y: 0.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1136841196384521436}
   m_Father: {fileID: 1136841195733814270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,6 +108,52 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1760348087814973747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136841195393052578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_data:
+    SkillName: 
+    skill_Type: 1
+    Skill_Tag: ATK
+    Skill_CoolTime: 10
+  skillScriptable: {fileID: 0}
+  unit: {fileID: 1136841195733814244}
+  animation_Con: {fileID: 1136841195733814247}
+  ATK_Area: {fileID: 1136841195439096218}
+  Is_ATK: 0
+--- !u!114 &7880032569450723839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136841195393052578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715d44247ea1857469e1327ea3ba7e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Swap_Speed: 0.05
+  Hit_Invincible_Time: 0.5
+  Hit_Color: []
+  Die_Effect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
+  Is_Hit: 0
+  Reset_Hit_Time: 0.5
+  sprite: []
+  rigid: {fileID: 1136841195733814264}
+  DamageText: {fileID: 7926511546102101991, guid: c8b8519a2270ede438422d93ec70428b, type: 3}
+  DamageTextPos: {fileID: 4325242023554544180}
+  animation_Con: {fileID: 1136841195733814247}
+  ATK_area: {fileID: 1136841196384521427}
 --- !u!1 &1136841195439096218
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,10 +226,9 @@ GameObject:
   - component: {fileID: 1136841195733814264}
   - component: {fileID: 1136841195733814247}
   - component: {fileID: 1136841195733814271}
-  - component: {fileID: 1136841195733814267}
   - component: {fileID: 1136841195733814244}
   - component: {fileID: 1136841195733814246}
-  - component: {fileID: 1136841195733814245}
+  - component: {fileID: -6256879913137716951}
   m_Layer: 8
   m_Name: BossMonster
   m_TagString: Monster
@@ -201,7 +249,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1136841195393052579}
-  - {fileID: 1136841196384521436}
   - {fileID: 2792976051877657998}
   - {fileID: 4325242023554544180}
   m_Father: {fileID: 0}
@@ -298,31 +345,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   monster: {fileID: 0}
   Skills: []
---- !u!114 &1136841195733814267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136841195733814268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 715d44247ea1857469e1327ea3ba7e4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Swap_Speed: 0.05
-  Hit_Invincible_Time: 0.5
-  Hit_Color: []
-  Die_Effect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
-  Hit_Effect: {fileID: 2792976051877657997}
-  Is_Hit: 0
-  Reset_Hit_Time: 0.5
-  sprite: []
-  rigid: {fileID: 1136841195733814264}
-  DamageText: {fileID: 7926511546102101991, guid: c8b8519a2270ede438422d93ec70428b, type: 3}
-  DamageTextPos: {fileID: 4325242023554544180}
-  animation_Con: {fileID: 1136841195733814247}
-  ATK_area: {fileID: 1136841196384521427}
 --- !u!114 &1136841195733814244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,16 +361,13 @@ MonoBehaviour:
   fDistance: 2
   fMove_Spd: 1
   fAttack_Delay: 1
+  MaxHp: 100
   fHP: 100
   fDash_Power: 5
-  iMP: 0
   iAD: 10
-  iAP: 10
-  iDEF: 5
-  iMDEF: 5
   skill_list:
   - {fileID: 1136841195733814246}
-  - {fileID: 1136841195733814245}
+  - {fileID: 1760348087814973747}
 --- !u!114 &1136841195733814246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,11 +385,10 @@ MonoBehaviour:
     skill_Type: 1
     Skill_Tag: Move
     Skill_CoolTime: 10
-  Skill_Effect_List: {fileID: 0}
-  Skill_Icon: {fileID: 0}
+  skillScriptable: {fileID: 0}
   unit: {fileID: 1136841195733814244}
   animation_Con: {fileID: 1136841195733814247}
---- !u!114 &1136841195733814245
+--- !u!114 &-6256879913137716951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,20 +397,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1136841195733814268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ce93c480da0d1145801efde87a366d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skill_data:
     SkillName: 
     skill_Type: 1
-    Skill_Tag: ATK
+    Skill_Tag: Skill
     Skill_CoolTime: 10
-  Skill_Effect_List: {fileID: 0}
-  Skill_Icon: {fileID: 0}
-  unit: {fileID: 1136841195733814244}
+  skillScriptable: {fileID: 0}
+  Summon_Prefap: {fileID: 1269176176514612236, guid: 58a73e0599a30d3498df955260f0584c, type: 3}
+  MaxSummon: 2
+  count: 0
+  Skill_Delay: 0
   animation_Con: {fileID: 1136841195733814247}
-  ATK_Area: {fileID: 1136841195439096218}
-  Is_ATK: 0
+  Pool: []
 --- !u!1 &1136841196384521427
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,13 +437,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136841196384521427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1136841195439096219}
-  m_Father: {fileID: 1136841195733814270}
-  m_RootOrder: 1
+  m_Father: {fileID: 1136841195393052579}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1136841196384521438
 BoxCollider2D:
@@ -481,7 +500,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1136841195733814270}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1136841195485971227
 PrefabInstance:
@@ -557,7 +576,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955623459812423940, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2955623459812423940, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
       propertyPath: m_LocalScale.x
@@ -617,11 +636,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
---- !u!1 &2792976051877657997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
-  m_PrefabInstance: {fileID: 1136841195733451914}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2792976051877657998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955623459812423940, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}

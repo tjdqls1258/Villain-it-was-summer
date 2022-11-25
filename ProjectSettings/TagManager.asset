@@ -9,6 +9,7 @@ TagManager:
   - Monster_ATK
   - Monster
   - Player_ATK
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -22,9 +23,9 @@ TagManager:
   - Monster_ATK
   - Player_ATK
   - Dash
-  - 
-  - 
-  - 
+  - Item
+  - ItemGetLayer
+  - UnderJump
   - 
   - 
   - 

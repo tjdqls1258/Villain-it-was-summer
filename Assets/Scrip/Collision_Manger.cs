@@ -22,15 +22,15 @@ public class Collision_Manger : MonoBehaviour
         switch (collision.gameObject.tag) //나와 충돌 한게 무엇인지
         {
             case "Player":
-                collision.gameObject.GetComponentInParent<Hit>().Player_Is_Hit(
-                    self.GetComponent<Unit>().iAD, new Vector2(self.transform.localScale.x / 10, 0),
+                collision.gameObject.GetComponentInChildren<Hit>().Player_Is_Hit(
+                    self.GetComponentInParent<Unit>().iAD, new Vector2(self.transform.localScale.x / 10, 0),
                     self.transform.position
                     );
                 break;
 
             case "Monster":
-                collision.gameObject.GetComponentInParent<Hit>().Player_Is_Hit(
-                    self.GetComponent<Unit>().iAD, new Vector2(self.transform.localScale.x / 10, 0),
+                collision.gameObject.GetComponentInChildren<Hit>().Player_Is_Hit(
+                    self.GetComponentInParent<Unit>().iAD, new Vector2(self.transform.localScale.x / 10, 0),
                     self.transform.position
                     );
                 break;

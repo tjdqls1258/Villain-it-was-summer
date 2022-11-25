@@ -31,53 +31,46 @@ private void Awake()
 
     private void Update()
     {
-        if(player.state == Unit.State.DIE)
+        if (player.state == Unit.State.DIE)
         {
             return;
         }
 
         #region Movement
-        if (Input.GetKey(KeyCode.LeftArrow))
+        move.Set_Target_pos((transform.right * Input.GetAxis("Horizontal")));
+        move.Skill_Ative();
+        
+
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            move.Set_Target_pos(-transform.right);
-            move.Skill_Ative();
-            player.Change_State(Unit.State.MOVE);
-            if (Input.GetKeyDown(KeyCode.X) )
-            {
-                dash.Set_Dash_Vector(Vector3.left);
-                dash.Skill_Ative();
-            }
+            dash.Set_Dash_Vector(Vector3.left);
+            dash.Skill_Ative();
         }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            move.Set_Target_pos(transform.right);
-            move.Skill_Ative();
-            player.Change_State(Unit.State.MOVE);
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                dash.Set_Dash_Vector(Vector3.right);
-                dash.Skill_Ative();
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+
+        if (Input.GetAxis("Horizontal") == 0.0f)
         {
             move.Cancel_Skill();
             player.Change_State(Unit.State.IDLE);
         }
+        else
+        {
+            player.Change_State(Unit.State.MOVE);
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }
 
         if (Input.GetKey(KeyCode.Z) && atk.Is_ATK)
         {
+            Debug.Log("AKT");
             move.Cancel_Skill();
             atk.Skill_Ative();
         }
         #endregion
 
-        if(hit.Is_Hit)
+        if (hit.Is_Hit)
         {
             StartCoroutine(cam.CameraShake(0.1f, 0.01f, hit.Hit_Invincible_Time));
             StartCoroutine(cam.ChagePost(0.1f, hit.Hit_Invincible_Time));

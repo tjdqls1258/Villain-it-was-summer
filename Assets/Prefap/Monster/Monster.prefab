@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5872331973478426481}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5872331973093007452
 GameObject:
@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5872331973093007443}
   - component: {fileID: 5872331973093007441}
+  - component: {fileID: 925954782}
   m_Layer: 9
   m_Name: Monster Body ATK
   m_TagString: Monster_ATK
@@ -55,14 +56,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5872331973093007452}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5872331973771046164}
-  m_Father: {fileID: 5872331973478426481}
-  m_RootOrder: 1
+  m_Father: {fileID: 5872331973817123628}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5872331973093007441
 BoxCollider2D:
@@ -90,6 +91,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &925954782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872331973093007452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b1de20144b8724181d09ac1da36e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: {fileID: 7112978547749440410, guid: 365c793d3b591054ab58f40eb65b8669, type: 3}
 --- !u!1 &5872331973478426483
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,10 +118,8 @@ GameObject:
   - component: {fileID: 5872331973478426487}
   - component: {fileID: 5872331973478426472}
   - component: {fileID: 5872331973478426480}
-  - component: {fileID: 5872331973478426484}
   - component: {fileID: 5872331973478426475}
   - component: {fileID: 5872331973478426473}
-  - component: {fileID: 5872331973478426474}
   m_Layer: 8
   m_Name: Monster
   m_TagString: Monster
@@ -128,7 +140,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5872331973817123628}
-  - {fileID: 5872331973093007443}
   - {fileID: 1044975853385367912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -224,31 +235,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   monster: {fileID: 0}
   Skills: []
---- !u!114 &5872331973478426484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5872331973478426483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 715d44247ea1857469e1327ea3ba7e4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Swap_Speed: 0.05
-  Hit_Invincible_Time: 0.5
-  Hit_Color: []
-  Die_Effect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
-  Hit_Effect: {fileID: 0}
-  Is_Hit: 0
-  Reset_Hit_Time: 0.5
-  sprite: []
-  rigid: {fileID: 5872331973478426487}
-  DamageText: {fileID: 7926511546102101991, guid: c8b8519a2270ede438422d93ec70428b, type: 3}
-  DamageTextPos: {fileID: 1044975853385367912}
-  animation_Con: {fileID: 5872331973478426472}
-  ATK_area: {fileID: 5872331973093007452}
 --- !u!114 &5872331973478426475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +257,7 @@ MonoBehaviour:
   iAD: 10
   skill_list:
   - {fileID: 5872331973478426473}
-  - {fileID: 5872331973478426474}
+  - {fileID: 585863121}
 --- !u!114 &5872331973478426473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,29 +279,6 @@ MonoBehaviour:
   Skill_Icon: {fileID: 0}
   unit: {fileID: 5872331973478426475}
   animation_Con: {fileID: 5872331973478426472}
---- !u!114 &5872331973478426474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5872331973478426483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skill_data:
-    SkillName: 
-    skill_Type: 1
-    Skill_Tag: ATK
-    Skill_CoolTime: 10
-  Skill_Effect_List: {fileID: 0}
-  Skill_Icon: {fileID: 0}
-  unit: {fileID: 5872331973478426475}
-  animation_Con: {fileID: 5872331973478426472}
-  ATK_Area: {fileID: 5872331973771046165}
-  Is_ATK: 0
 --- !u!1 &5872331973771046165
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5872331973771046164}
   - component: {fileID: 5872331973771046155}
+  - component: {fileID: 650093863}
   m_Layer: 9
   m_Name: Monster ATK
   m_TagString: Monster_ATK
@@ -374,6 +338,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3510437, y: 0.55103636}
   m_EdgeRadius: 0
+--- !u!114 &650093863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872331973771046165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b1de20144b8724181d09ac1da36e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: {fileID: 7112978547749440410, guid: 365c793d3b591054ab58f40eb65b8669, type: 3}
 --- !u!1 &5872331973817123629
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +362,8 @@ GameObject:
   - component: {fileID: 5872331973817123628}
   - component: {fileID: 5872331973817123618}
   - component: {fileID: 5872331973817123619}
+  - component: {fileID: 585863121}
+  - component: {fileID: 5872331973188417505}
   m_Layer: 0
   m_Name: Sprite And Animation
   m_TagString: Untagged
@@ -403,7 +382,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5872331973093007443}
   m_Father: {fileID: 5872331973478426481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,3 +459,50 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &585863121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872331973817123629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0183147e480e5354ba3ceb40ef699865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill_data:
+    SkillName: 
+    skill_Type: 1
+    Skill_Tag: ATK
+    Skill_CoolTime: 10
+  Skill_Effect_List: {fileID: 0}
+  Skill_Icon: {fileID: 0}
+  unit: {fileID: 5872331973478426475}
+  animation_Con: {fileID: 5872331973478426472}
+  ATK_Area: {fileID: 5872331973771046165}
+  Is_ATK: 0
+--- !u!114 &5872331973188417505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872331973817123629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715d44247ea1857469e1327ea3ba7e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Swap_Speed: 0.05
+  Hit_Invincible_Time: 0.5
+  Hit_Color: []
+  Die_Effect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
+  Is_Hit: 0
+  Reset_Hit_Time: 0.5
+  sprite: []
+  rigid: {fileID: 5872331973478426487}
+  DamageText: {fileID: 7926511546102101991, guid: c8b8519a2270ede438422d93ec70428b, type: 3}
+  DamageTextPos: {fileID: 1044975853385367912}
+  animation_Con: {fileID: 5872331973478426472}
+  ATK_area: {fileID: 5872331973093007452}

@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Skill_Icon: {fileID: 4668938655123782945, guid: 179f77b4a77508644bb0e4717e8add6a, type: 3}
+  - SkillData: {fileID: 11400000, guid: c1bbcad483c45a5439a1516a3126bbdc, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

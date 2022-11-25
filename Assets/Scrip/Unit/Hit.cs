@@ -23,7 +23,7 @@ public class Hit : MonoBehaviour
 
     private void Awake()
     {
-        Data = GetComponent<Unit>();
+        Data = GetComponentInParent<Unit>();
         sprite = GetComponentsInChildren<SpriteRenderer>();
         Hit_Color = new Color[sprite.Length];
     }
@@ -66,19 +66,16 @@ public class Hit : MonoBehaviour
 
         animation_Con.Toggle_Die();
         Data.Change_State(Unit.State.DIE);
-        StartCoroutine(Destroy_Self());
     }
     //애니메이션 재생후 제거.
-    IEnumerator Destroy_Self()
+    public void Destroy_Self()
     {
-        yield return new WaitForSeconds(animation_Con.CurrentAnimationLength());
         if (transform.parent != null)
         {
-            yield return new WaitForSeconds(animation_Con.CurrentAnimationLength());
             transform.position = new Vector3(0, transform.position.y, 0);
             transform.parent.gameObject.SetActive(false);
         }
-        else { Destroy(gameObject, animation_Con.CurrentAnimationLength()); }
+        else { Destroy(gameObject); }
     }
 
     private void Drop_Item()

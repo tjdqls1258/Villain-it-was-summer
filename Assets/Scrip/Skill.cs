@@ -16,8 +16,7 @@ public class Skill_Data
 public abstract class Skill : MonoBehaviour
 {
     public Skill_Data skill_data = new Skill_Data();
-    public GameObject Skill_Effect_List;
-    public Sprite Skill_Icon;
+    public SkillDataScriptable skillScriptable;
     public abstract void Skill_Ative();
     public abstract void Cancel_Skill();
 }

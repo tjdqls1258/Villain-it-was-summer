@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Skill1 : Skill
 {
-    private void Awake()
+    private void OnEnable()
     {
         this.skill_data.SkillName = GetType().ToString();
     }

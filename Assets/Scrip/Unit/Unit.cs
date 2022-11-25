@@ -46,4 +46,11 @@ public class Unit : MonoBehaviour
         skills = skill_list.FindAll(index => index.skill_data.Skill_Tag == _tag);
         return skills.ToArray();
     }
+
+    public void AddSkill(Skill skill) { skill_list.Add(skill); }
+
+    public void DeletSkill(Skill skill)
+    {
+        skill_list.Remove(skill);
+    }
 }
